@@ -1,0 +1,181 @@
+"PKNAME","PEAKID","PKNAME2","PKCONSO","LOCATION","HEIGHTM","ALL","osm.x","osm.y","osm","wiki","LAT","LONG"
+"Ama Dablam","AMAD","Amai Dablang","Ama Dablam","Khumbu Himal",6814,2,1,0,0,1,,
+"Amphu I","AMPH","NA","Amphu","Khumbu Himal (E of Amphu Laptsa, W of Baruntse)",6740,0,0,0,0,0,"27,87027778","86,95555556"
+"Anidesh Chuli","ANID","White Wave Peak","Anidesh Chuli","Kangchenjunga Himal (W of Kangbachen)",6808,0,0,0,0,0,"27,71861111","88,07083333"
+"Annapurna I","ANN1","NA","Annapurna I","Annapurna Himal",8091,3,0,1,1,1,,
+"Annapurna I East","ANNE","NA","Annapurna I East","Annapurna Himal (ENE of Annapurna I)",8026,1,0,0,0,1,,
+"Annapurna I Middle","ANNM","NA","Annapurna I Middle","Annapurna Himal (ENE of Annapurna I)",8051,1,0,0,0,1,,
+"Annapurna II","ANN2","NA","Annapurna II","Annapurna Himal",7937,3,0,1,1,1,,
+"Annapurna III","ANN3","NA","Annapurna III","Annapurna Himal",7555,3,0,1,1,1,,
+"Annapurna IV","ANN4","NA","Annapurna IV","Annapurna Himal",7525,3,0,1,1,1,,
+"Annapurna South","ANNS","Annapurna Dakshin, Moditse","Annapurna South","Annapurna Himal (S of Annapurna I and Fang)",7219,2,1,0,0,1,,
+"Api Main","APIM","NA","Api Main","Api Himal",7132,0,0,0,0,0,"30,00527778","80,92555556"
+"Api West","APIW","NA","Api West","Api Himal (W of Api)",7076,0,0,0,0,0,"30,00166667","80,92555556"
+"Baruntse","BARU","NA","Baruntse","Khumbu Himal (W of Makalu)",7152,3,1,0,1,1,,
+"Bhairab Takura","BTAK","Madiya","Bhairab Takura","Jugal Himal (ENE of Dorje Lhakpa on Tibetan border)",6799,0,0,0,0,0,"28,19777778","85,80972222"
+"Bobaye","BOBA","NA","Bobaye","Api Himal (S of Nampa)",6808,2,1,0,0,1,,
+"Burke Kang","BURK","Burke Khang","Burke Kang","Khumbu Himal (ENE of Hungchhi on Tibetan border)",6942,0,0,0,0,0,"28,03694444","87,29416667"
+"Chabuk","CHAB","Tsajirip","Chabuk","Ohmi Kangri Himal (E of Ohmi Kangri on Tibetan border)",6792,0,0,0,0,0,"27,88583333","87,98750000"
+"Chago","CHAG","NA","Chago","Makalu Himal (NW of Makalu II on Tibetan border)",6893,1,0,0,1,0,,
+"Chako","CHAK","NA","Chako","Damodar Himal (ESE of Bhrikuti Shail)",6704,0,0,0,0,0,"28,88055556","84,28861111"
+"Chamar","CHMM","Shringi Himal","Chamar","Shringi Himal (SSE of Chamar)",7161,2,1,0,0,1,,
+"Chamar","CHMR","Shringi Himal","Chamar","Shringi Himal (SSE of Chamar)",7161,2,1,0,0,1,,
+"Chamar North","CHMN","Peak 23","Chamar North","Shringi Himal",7165,0,0,0,0,0,"28,55527778","84,94694444"
+"Chamlang","CHAM","NA","Chamlang","Khumbu Himal (in Hongku Valley, SW of Makalu)",7321,2,1,0,0,1,,
+"Changtse","CTSE","Everest North Peak","Changtse","North of Everest (in Tibet)",7583,1,0,0,0,1,,
+"Cheo Himal","CHEO","NA","Cheo Himal","Peri Himal (ESE of Himlung Himal on Tibetan border)",6820,0,0,0,0,0,"28,76472222","84,45416667"
+"Cho Oyu","CHOY","NA","Cho Oyu","Khumbu Himal (NW of Everest on Tibetan border)",8188,3,0,1,1,1,,
+"Chumbu","CHUM","NA","Chumbu","Khumbu Himal (WSW of Khangri Shar near Tibetan border)",6859,2,1,0,0,1,,
+"Churen Himal Central","CHUR","NA","Churen","Dhaulagiri Himal (NW of Dhaulagiri VI)",7385,0,0,0,0,0,,
+"Churen Himal East","CHRE","NA","Churen","Dhaulagiri Himal (NW of Dhaulagiri VI)",7371,0,0,0,0,0,,
+"Churen Himal West","CHRW","NA","Churen","Dhaulagiri Himal (NW of Dhaulagiri VI)",7371,0,0,0,0,0,,
+"Dhaulagiri I","DHA1","NA","Dhaulagiri I","Dhaulagiri Himal",8167,0,0,0,0,0,"28,69666667","83,495"
+"Dhaulagiri II","DHA2","NA","Dhaulagiri II","Dhaulagiri Himal (NW of Dhaulagiri I)",7751,2,1,0,0,1,,
+"Dhaulagiri III","DHA3","Nalu, Naula","Dhaulagiri III","Dhaulagiri Himal (SW of Dhaulagiri II)",7715,1,1,0,0,0,,
+"Dhaulagiri IV","DHA4","NA","Dhaulagiri IV","Dhaulagiri Himal (W of Dhaulagiri V)",7661,2,1,0,0,1,,
+"Dhaulagiri V","DHA5","NA","Dhaulagiri V","Dhaulagiri Himal (SW of Dhaulagiri III)",7618,2,1,0,0,1,,
+"Dhaulagiri VI","DHA6","NA","Dhaulagiri VI","Dhaulagiri Himal (WSW of Dhaulagiri IV)",7268,1,1,0,0,0,,
+"Dome Kang","DOMK","NA","Domo","Jongsang Himal (ESE of Jongsong on Indian border)",7264,0,0,0,0,0,,
+"Domo","DOMO","Jongsang SE Peak","Domo","Jongsang Himal (SE of Jongsong on Indian border)",7447,1,0,0,0,1,,
+"Dorje Lhakpa","DORJ","NA","Dorje Lhakpa","Jugal Himal (near Tibetan border)",6966,2,1,0,0,1,,
+"Drangnag Ri","DRAN","Thaknak Ri","Drangnag Ri","Rolwaling Himal (N of Tesi Laptsa near Tibetan border)",6757,2,1,0,0,1,,
+"Drohmo","DROM","Domo, Longridge Peak","Drohmo","Jongsang Himal (NNW of Kangchenjunga)",6881,2,1,0,0,1,,
+"Everest","EVER","Sagarmatha, Chomolungma, Qomolungma","Everest","Khumbu Himal",8849,1,0,1,0,0,,
+"Fang","FANG","Varaha Shikhar, Varaha Chuli, Finger","Annapurna I","Annapurna Himal (SW of Annapurna I)",7647,0,0,0,0,0,,
+"Firnkopf","FIRN","Phirankoph, Firnkopf East","Firnkopf","Saipal Himal (W of Saipal)",6730,0,0,0,0,0,"29,89805556","81,44611111"
+"Firnkopf West","FIRW","Phirankoph West","Firnkopf West","Saipal Himal (WSW of Firnkopf)",6745,0,0,0,0,0,"29,89805556","81,44611111"
+"Gama Peak","GAMA","NA","Gama Peak","Dhaulagiri Himal (N of Dhaulagiri VI, S of Junction Peak)",7187,1,1,0,0,0,,
+"Ganesh I","GAN1","Yangra Kangri","Ganesh I","Ganesh Himal (on Tibetan border)",7422,0,0,0,0,0,"28,39166667","85,12888889"
+"Ganesh II","GAN2","NA","Ganesh II","Ganesh Himal (WSW of Ganesh I)",7118,0,0,0,0,0,"28,37888889","85,05916667"
+"Ganesh III","GAN3","Salasungo, Kang Lombo, Lopsang Karbo","Ganesh III","Ganesh Himal (S of Ganesh I on Tibetan border)",7043,0,0,0,0,0,"28,33527778","85,12472222"
+"Ganesh IV","GAN4","Pabil","Ganesh IV","Ganesh Himal (SW of Ganesh I)",7104,0,0,0,0,0,"28,34555556","85,08"
+"Ganesh V","GAN5","NA","Ganesh V","Ganesh Himal (SE of Ganesh I on Tibetan border)",6770,1,1,0,0,0,,
+"Ganesh VI","GAN6","NA","Ganesh VI","Ganesh Himal (subpeak SE of Ganesh II)",6908,1,1,0,0,0,,
+"Gangapurna","GANG","NA","Gangapurna","Annapurna Himal (NW of Annapurna III)",7455,4,1,1,1,1,,
+"Gangapurna West","GANW","Lachenal Peak, Asapurna","Gangapurna West","Annapurna Himal (W of Gangapurna)",7140,0,0,0,0,0,"28,60111111","83,94388889"
+"Gaurishankar","GAUR","Jomo Tseringma","Gauri","Rolwaling Himal (on Tibetan border)",7135,0,0,0,0,0,"27,93722222","86,35027778"
+"Gaurishankar South","GAUS","Gauri","Gaurishankar","Rolwaling Himal (S of Gaurishankar)",7010,0,0,0,0,0,"27,965","86,33777778"
+"Ghanyala Hies","GHAN","NA","Ghanyala Hies","Janak Himal (NW of Janak Chuli on Tibetan border)",6744,0,0,0,0,0,"27,89555556","88,08277778"
+"Gimmigela Chuli","GIMM","Twins","Gimmigela Chuli","Kangchenjunga Himal (N of Kangchenjunga on Indian border)",7350,1,0,0,0,1,,
+"Gimmigela Chuli East","GIME","Twins","Gimmigela Chuli","Kangchenjunga Himal (N of Kangchenjunga on Indian border)",7007,0,0,0,0,0,,
+"Glacier Dome","GLAC","Tarke Kang, Tarke Khang","Annapurna I","Annapurna Himal (E of Annapurna I)",7168,0,0,0,0,0,,
+"Guras","GURA","Gurans","Guras","Guras Himal (NE of Nampa on Tibetan border)",6744,0,0,0,0,0,"30,04305556","81,10888889"
+"Gurja Himal","GURJ","NA","Gurja Himal","Dhaulagiri Himal (S of Dhaulagiri VI)",7193,2,1,0,0,1,,
+"Gurkarpo Ri","GURK","NA","Gurkarpo Ri","Jugal Himal (N of Dorje Lhakpa on Tibetan border)",6889,2,1,0,0,1,,
+"Gyachung Kang","GYAC","NA","Gyachung Kang","Khumbu Himal (E of Cho Oyu on Tibetan border)",7861,3,0,1,1,1,,
+"Gyajikang","GYAJ","Gyaji Khang","Gyaji Kang","Peri Himal (SW of Himlung Himal)",7074,0,0,0,0,0,,
+"Herzog Peak","HERZ","Khangsar Khang West","Khangsar Khang West","Annapurna Himal (WSW of Roc Noir)",7555,0,0,0,0,0,"28,60916667","83,86027778"
+"Himalchuli East","HIME","Himalchuli Main","Himalchuli East","Mansiri Himal (SE of Manaslu)",7893,0,0,0,0,0,"28,43694444","84,64138889"
+"Himalchuli North","HIMN","NA","Himalchuli North","Mansiri Himal (SE of Manaslu, WNW of Himalchuli Main)",7331,0,0,0,0,0,"28,44916667","84,60638889"
+"Himalchuli West","HIMW","NA","Himalchuli West","Mansiri Himal (SE of Manaslu, W of Himalchuli Main)",7540,0,0,0,0,0,"28,43555556","80,61888889"
+"Himjung","HIMJ","Nemjung Goth","Himlung Himal","Peri Himal (S of Himlung Himal)",7092,0,0,0,0,0,,
+"Himlung East","HMLE","NA","Himlung East","Peri Himal (E of Himlung Himal on Tibetan border)",6932,0,0,0,0,0,"28,76916667","84,43888889"
+"Himlung Himal","HIML","NA","Himlung Himal","Peri Himal (NW of Manaslu near Tibetan border)",7126,1,0,0,0,1,,
+"Hongku","HONK","Hongku Chuli Nup, Honku, Sura Peak","Hongu","Khumbu Himal (in Hongku Valley, W of Hongku Chuli)",6764,0,0,0,0,0,"27,82555556","86,97944444"
+"Hongku Chuli","HNKU","Hunku Chuli, Pyramid Peak","Hunku Chuli","Khumbu Himal (in Hongku Valley, NE of Chamlang)",6833,0,0,0,0,0,"27,8175","87,01194444"
+"Hungchhi","HCHI","Hunchhi, Chakung, Gyubanare Kang, Gyuba Tshomotse","Gyachung Khang","Khumbu Himal (S of Gyachung Kang on Tibetan border)",7029,0,0,0,0,0,"28,09444444","86,75083333"
+"Janak Chuli","JANK","Janak, Outlier","Janak Chuli","Janak Himal (WNW of Jongsang on Tibetan border)",7041,1,1,0,0,0,,
+"Jannu","JANU","Khumbhakarna","Jannu","Kangchenjunga Himal (W of Kangchenjunga)",7711,1,0,0,0,1,,
+"Jannu East","JANE","Khumbhakarna East","Jannu","Kangchenjunga Himal (W of Kangchenjunga)",7460,0,0,0,0,0,,
+"Jasemba Goth","JASG","Dzasampa Kang","Jasemba Goth","Khumbu Himal (NW of Pasang Lhamu Chuli)",6730,0,0,0,0,0,"28,07333333","86,61694444"
+"Jethi Bahurani","JETH","Jettiborani, Jutibofurani","Jethi Bahurani","Api Himal (S of Nampa and Bobaye)",6850,2,1,0,0,1,,
+"Jobo Rinjang","JOBO","Jobo Ribjang","Jobo Rinjang","Rolwaling Himal (SW of Nangpa La near Tibetan border)",6778,2,1,0,0,1,,
+"Jongsang","JONG","Jonsong, Jhinsang","Jongsong Peak","Jongsang Himal (on Indian-Tibetan border)",7462,0,0,0,0,0,,
+"Junction Peak","JUNC","NA","Junction Peak","Dhaulagiri Himal (on ridge joining Dhaulagiri VI, IV and Churen)",7133,1,1,0,0,0,,
+"Kabru Main","KABR","Kabru Central","Kabru Central","Simhalila Himal (S of Talung on Indian border)",7412,0,0,0,0,0,"27,63527778","27,63527778"
+"Kabru North","KABN","NA","Kabrut North","Simhalila Himal (S of Kabru Main on Indian border)",7338,0,0,0,0,0,"27,60805556","88,11361111"
+"Kabru South","KABS","Kabru IV","Kabru","Simhalila Himal (S of Kabru North on Indian border)",7318,0,0,0,0,0,"27,642","88,1228"
+"Kali Himal","KALI","Chota Ri, Baruntse North","Kali Himal","Khumbu Himal (NW of Baruntse)",6985,1,1,0,0,0,,
+"Kang Guru","KGUR","Naurgaon","Kang Guru","Peri Himal (SW of Himlung Himal)",6981,1,0,0,0,1,,
+"Kang Nagchugo","KNAG","Khang Nagchugo","Kang Nagchugo","Rolwaling Himal (E of Chekigo on Tibetan border)",6737,0,0,0,0,0,"27,90611111","86,44472222"
+"Kangbachen","KANB","Kambachen","Kangbachen","Kangchenjunga Himal (W Spur of Kangchenjunga)",7902,2,1,0,0,1,,
+"Kangbachen East","KBNE","Kambachen East","Kangbachen East","Kangchenjunga Himal (plateau SE of Kangbachen?)",7780,0,0,0,0,0,"27,7175","88,15805556"
+"Kangchenjunga","KANG","NA","Kangchenjunga","Kangchenjunga Himal",8586,2,1,0,1,0,,
+"Kangchenjunga Central","KANC","NA","Kangchenjunga Central","Kangchenjunga Himal (between Main and South summits)",8473,2,1,0,0,1,,
+"Kangchenjunga North","KANN","NA","Kangchenjunga North","Kangchenjunga Himal (small knob north of Main summit)",7938,0,0,0,0,0,"27,71083333","88,15444444"
+"Kangchenjunga South","KANS","NA","Kangchenjunga South","Kangchenjunga Himal",8476,2,1,0,0,1,,
+"Kangtega","KTEG","Kantega, Khangtega, Kang Taiga","Kangtega","Khumbu Himal (SW of Ama Dablam)",6783,2,1,0,0,1,,
+"Kanjiroba North","KJRN","NA","Kanjiroba","Kanjiroba Himal",6858,0,0,0,0,0,"29,37555556","82,64055556"
+"Kanjiroba South","KJRS","Kanjiroba Main","Kanjiroba","Kanjiroba Himal",6883,0,0,0,0,0,"29,37555556","82,64055556"
+"Kanti Himal","KANT","Ronglai Kangri, Kaqur Kangri, Kubi Grangri","Kanti Himal","Kanti Himal (NNW of Kanjiroba on Tibetan border)",6850,0,0,0,0,0,,
+"Khamjung","KHAM","Khumjung, Khamjungar","Khamjung","Damodar Himal (W of Saribung and Bhrikuti)",6759,0,0,0,0,0,"28,91888889","84,14750000"
+"Khangri Shar","KGRI","NA","Khangri Shar","Khumbu Himal (W of Pumori)",6792,1,0,0,0,1,,
+"Khatang","KHAT","NA","Khatang","Rolwaling Himal (E of Numbur)",6790,2,1,0,0,1,,
+"Kimshung","KIMS","Kinshung, Tsangbu Ri","Kimshung","Langtang Himal (NE of Langtang Lirung)",6781,2,1,0,0,1,,
+"Kirat Chuli","KIRA","Tent Peak","Kirat Chuli","Jongsang Himal (N of Kangchenjunga on Indian border)",7362,2,1,0,0,1,,
+"Kyashar","KYAS","Peak 43, Tangnag Tseng","Kyashar","Khumbu Himal (S of Kantega)",6770,2,1,0,0,1,,
+"Lachama Chuli","LCHA","Kubi Kangri, Kubi Dongdong","Lachama Chuli","Changla Himal (N of Gorakh Himal on Tibetan border)",6721,0,0,0,0,0,"30,13638889","82,20055556"
+"Lamjung Himal","LAMJ","NA","Lamjung Himal","Annapurna Himal (SE of Annapurna II)",6983,2,1,0,0,1,,
+"Langchung Khang","LNGK","Langpo Chung","Langchung Khang","Jongsang Himal (NW of Langpo on Indian border)",6786,1,1,0,0,0,,
+"Langpo","LNPO","Longpo","Langpo","Jongsang Himal (SE of Jongsang on Indian border)",6965,0,0,0,0,0,"27,85333333","88,19888889"
+"Langpo South","LNPS","NA","Langpo South","Jongsang Himal (SE of Langpo on Indian border)",6857,1,1,0,0,0,,
+"Langtang Lirung","LANG","Langtang","Langtang Lirung","Langtang Himal",7227,2,0,0,1,1,,
+"Langtang Ri","LANR","NA","Langtang Ri","Langtang Himal (NE of Langtang Lirung on Tibetan border)",7205,2,1,0,0,1,,
+"Lashar I","LASH","Loshar I","Lashar I","Janak Himal (NW of Lashar II on Tibetan border)",6842,1,1,0,0,0,,
+"Lashar II","LAS2","Loshar II","Lashar II","Janak Himal (SW of Ghhanyala Hies on Tibetan border)",6803,1,1,0,0,0,,
+"Leonpo Gang","LEON","Dorje Pahad, Big White Peak","Leonpo Gang","Jugal Himal (NNE of Dorje Lhakpa on Tibetan border)",6979,0,0,0,0,0,"28,19555556","85,80194444"
+"Leonpo Gang East","LEOE","Gyalgen Peak","Leonpo Gang East","Jugal Himal (NE of Leonpo Gang on Tibetan border)",6733,0,0,0,0,0,"28,2025","85,81777778"
+"Lhotse","LHOT","NA","Lhotse","Khumbu Himal",8516,2,0,0,1,1,,
+"Lhotse Middle","LHOM","Lhotse Intermediate","Lhotse Middle","Khumbu Himal (E of Lhotse)",8410,1,0,0,0,1,,
+"Lhotse Shar","LSHR","Lhotse II","Lhotse Shar","Khumbu Himal (ESE of Lhotse and Lhotse Middle)",8382,2,0,0,1,1,,
+"Lingtren","LING","NA","Lingtren","Khumbu Himal (ENE of Pumori on Tibetan border)",6713,1,0,0,0,1,,
+"Linkhu Chuli Shar","LIK1","Bigphera-Go Shar, Pigpferago Shar, Linkhu Chuli I","Linkhu Chuli I","Rolwaling Himal (S of Parchamo)",6719,0,0,0,0,0,"27,81111111","86,54472222"
+"Lugula","LUGU","NA","Lugula Himal","Damodar Himal (E of Bhrikuti Sail on Tibetan border)",6899,0,0,0,0,0,,
+"Lunag II","LUN2","NA","Lunag Ri","Rolwaling Himal (SW of Nangpa La near Tibetan border)",6812,0,0,0,0,0,,
+"Lunag Ri","LUNR","Lunag I, Rongshar Ri I, Ondrej Peak","Lunag Ri","Rolwaling Himal (SW of Nangpa La on Tibetan border)",6895,2,1,0,0,1,,
+"Machhapuchhare","MACH","NA","Annapurna II","Annapurna Himal (SE of Annapurna III)",6993,0,0,0,0,0,,
+"Makalu","MAKA","NA","Makalu","Makalu Himal",8485,1,0,0,0,1,,
+"Makalu II","MAK2","Kangchungtse","Makalu II","Makalu Himal (NNW of Makalu on Tibetan border)",7678,0,0,0,0,0,"27,91555556","87,08055556"
+"Manaslu","MANA","Kutang I, Peak 30","Manaslu","Manaslu Himal",8163,3,0,1,1,1,,
+"Manaslu North","MANN","Manaslu II","Manaslu North","Manaslu Himal (N of Manaslu)",6994,1,1,0,0,0,,
+"Nampa","NAMP","Chisel Peak","Nampa","Api Himal (E of Api)",6729,1,1,0,0,0,,
+"Nangpai Gosum I","NAG1","Nagpai Gosum I, Cho Aui","Nagpai Gosum I","Khumbu Himal (WSW of Cho Oyu on Tibetan border)",7321,0,0,0,0,0,"28,07055556","86,63777778"
+"Nangpai Gosum II","NAG2","Nagpai Gosum II, Chamar","Nagpai Gosum II","Khumbu Himal (WSW of Cho Oyu on Tibetan border)",7287,1,0,0,0,1,"28,07472222","86,6525"
+"Nemjung","NEMJ","NA","Nemjung","Peri Himal (S of Himlung Himal and Himjung)",7140,1,0,0,0,1,,
+"Nepal Gap Peak","NGAP","Nepal Gyap Peak","Nepal Peak II","Kangchenjunga Himal (ENE of Gimmegela on Indian border)",7007,0,0,0,0,0,"27,7786","88,1894"
+"Nepal Peak","NEPA","NA","Nepal Peak","Jongsang Himal (N of Kangchenjunga on Indian border)",7177,2,0,1,0,1,,
+"Ngojumba Kang I","NGOJ","Ngozumba Kang, Ngozumba Ri, Tenzing Peak","Ngojumba Kang II","Khumbu Himal (NE of Cho Oyu on Tibetan border)",7916,0,0,0,0,0,,
+"Ngojumba Kang II","NGO2","NA","Ngojumba Kang II","Khumbu Himal (NE of Cho Oyu on Tibetan border)",7743,1,0,1,0,0,,
+"Ngojumba Kang III","NGO3","Hillary Peak","Ngojumba Kang II","Khumbu Himal (NE of Cho Oyu on Tibetan border)",7681,0,0,0,0,0,,
+"Nilgiri Central","NILC","NA","Nilgiri Central","Annapurna-Nilgiri Himal (NW of Annapurna I)",6940,1,1,0,0,0,,
+"Nilgiri North","NILN","NA","Nilgiri North","Annapurna-Nilgiri Himal (NW of Annapurna I)",7061,2,1,0,0,1,,
+"Nilgiri South","NILS","NA","Nilgiri South","Annapurna-Nilgiri Himal (NW of Annapurna I)",6839,2,1,0,0,1,,
+"Numbur","NUMB","NA","Numbur","Rolwaling Himal (SW of Namche Bazar)",6958,0,0,0,0,0,"27,75444444","86,57305556"
+"Nup La Kang","NUPL","Nupla Khang","Nangpa La","Khumbu Himal (N of Nup La on Tibetan border)",6861,0,0,0,0,0,,
+"Nuptse","NUPT","NA","Nuptse","Khumbu Himal (SW of Everest)",7864,1,0,0,0,1,,
+"Nuptse East I","NUPE","NA","Nuptse","Khumbu Himal (E of Nuptse main summit)",7795,0,0,0,0,0,,
+"Nuptse West II","NUPW","Nuptse Nup II","Nuptse","Khumbu Himal (NW of Nuptse main summit)",7732,0,0,0,0,0,,
+"Ohmi Kangri","OHMI","NA","Ohmi Kangri","Ohmi Kangri Himal (NW of Kangchenjunga on Tibetan border)",6839,0,0,0,0,0,"27,89722222","87,96694444"
+"Palung","PLNG","Palung Ri","Cho Oyu","North of Cho Oyu (in Tibet)",7012,0,0,0,0,0,,
+"Panbari","PANB","NA","Panbari","Peri Himal (NW of Larkya La)",6905,1,0,0,0,1,,
+"Pasang Lhamu Chuli","PASA","Jasemba","Pasang Lhamu Chuli","Khumbu Himal (W of Cho Oyu & Cho Aui on Tibetan border)",7350,0,0,0,0,0,"28,07333333","6,61694444"
+"Peak 29","PK29","Ngadi Chuli, Dakura, Dr Harka Gurung Chuli","Dr Harka Gurung Chuli","Manaslu Himal (S of Manaslu)",7871,0,0,0,0,0,"28,50333333","84,56861111"
+"Peak 4","PK04","Shershon Ri","Peak 4","Khumbu Himal (SE of Baruntse)",6736,1,1,0,0,0,,
+"Pemthang Karpo Ri","PEMK","Dome Blanc, Kan Karmo","Pemthang Karpo Ri","Jugal Himal (NNW of Dorje Lhakpa on Tibetan border)",6865,1,0,0,0,1,,
+"Pemthang Ri","PEMR","NA","Pemthang Ri","Jugal Himal (N of Pemthang Karpo Ri on Tibetan border)",6743,1,1,0,0,0,,
+"Pethangtse","PETH","NA","Pethangtse","Khumbu Himal (NW of Makalu on Tibetan border)",6739,1,0,0,1,0,,
+"Phu Kang Go","PHUG","Phu Khang Go, Athahra Saya Khola Himal","Phu Kang Go","Peri Himal (SE of Cheo on Tibetan border)",6767,0,0,0,0,0,"28,73472222","84,49388889"
+"Pumori","PUMO","NA","Pumori","Khumbu Himal (WNW of Everest on Tibetan border)",7138,1,0,0,0,1,,
+"Putha Hiunchuli","PUTH","Dhaulagiri VII","Putha Hiunchuli","Dhaulagiri Himal (W of Churen Himal)",7246,2,1,0,0,1,,
+"Pyramid Peak","PYRM","Pathibhara Chuli, Pathibhara Khas","Pathibara","Jongsang Himal (N of Kangchenjunga on Indian border)",7140,0,0,0,0,0,,
+"Ramtang Chang","RAMC","Wedge Peak, Chang Himal","Ramthang Chang","Kangchenjunga Himal (N of Ramtang)",6802,0,0,0,0,0,,
+"Ratna Chuli","RATC","NA","Ratna Chuli","Peri Himal (NW of Himlung on Tibetan border)",7035,2,1,0,0,1,,
+"Roc Noir","ROCN","Khangsar Kang, Khang Sar Khang","Khangsar Khang","Annapurna Himal (ENE of Annapurna I)",7485,0,0,0,0,0,"28,6133","83,8736"
+"Saipal","SAIP","NA","Saipal","Saipal Himal",7030,2,1,0,0,1,,
+"Saipal East Humla","SAIE","NA","Saipal East","Saipal Himal (NE of Saipal)",6925,0,0,0,0,0,"29,89111111","81,50055556"
+"Shalbachum","SHAL","Salbachum, Phrul Rangtshan Ri","Shalbachum","Langtang Himal (E of Langtang Lirung on Tibetan border)",6707,1,1,0,0,0,,
+"Shartse","SHAR","Peak 38, Shanti Shikhar","Shanti Shikhar","Khumbu Himal (E of Lhotse Shar on Tibetan border)",7591,0,0,0,0,0,"27,95527778","86,9675"
+"Shartse II","SHA2","Junction Peak","Shartse II","Khumbu Himal (E of Lhotse Shar on Tibetan border)",7457,1,0,0,1,0,,
+"Sphinx","SPHN","Pathibhara Phurba, Pathibhara East","Pathibhara South East","Jongsang Himal (NE of Pathibhara on Indian border)",6825,0,0,0,0,0,"27,8084","88,188"
+"Takargo","TKRG","Dragker-go","Takargo","Rolwaling Himal (E of Chobutse)",6771,2,1,0,0,1,,
+"Talung","TLNG","NA","Talung","Simhalila Himal (S of Kangchenjunga on Indian border)",7349,2,1,0,0,1,,
+"Tarke Kang Shar","TARS","Tare Kang","Tarke Khang","Annapurna Himal (E of Glacier Dome)",7069,0,0,0,0,0,"28,605","83,91611111"
+"Tengi Ragi Tau","TENR","Agole, Angole","Tengi Ragi Tau","Rolwaling Himal (N of Tesi Laptsa)",6938,2,1,0,0,1,,
+"Tharke Kang","THRK","Tharke Khang","Tarke Khang","Khumbu Himal (S of Nup La on Tibetan border)",6710,0,0,0,0,0,,
+"Thulagi","THUL","Mansiri Himal","Thulagi Peak","Manaslu Himal (SW of Manaslu)",7059,0,0,0,0,0,"28,52777778","84,52277778"
+"Tilicho","TILI","Tilitso","Tilicho Peak","Annapurna-Nilgiri Himal (N of Annapurna I)",7134,0,0,0,0,0,"28,6825","83,81388889"
+"Tukuche","TUKU","NA","Tukuche Peak","Dhaulagiri Himal (NE of Dhaulagiri I)",6920,0,0,0,0,0,"28,74611111","83,56083333"
+"Tutse","TUTS","Peak 6, Nephu","Tu Tse","Makalu Himal (SE of Makalu)",6758,0,0,0,0,0,"27,77194444","87,10138889"
+"Yalung Kang","YALU","Yalungkar","Yalung Khang","Kangchenjunga Himal (W summit of Kangchenjunga)",8505,1,1,0,0,0,"27,705","88,13861111"
+"Yalung Kang West","YALW","NA","Yalung Khang West","Kangchenjunga Himal (W summit of Yalung Kang)",8077,0,0,0,0,0,"27,70611111","88,12555556"
+"Yangra Kangri South","YNGS","Yangra South, Ganesh I South","Yangra South","Ganesh Himal (NW of Ganesh III on Tibetan border)",6863,0,0,0,0,0,"28,34638889","85,11"
