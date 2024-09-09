@@ -1,0 +1,71 @@
+--- 
+title: "Nepal expeditions"
+author: "Ronan Ysebaert, 2024"
+format:
+  dashboard:
+    theme: journal
+--- 
+
+## Row {height=10%}
+
+```{ojs}
+//| echo: false
+viewof choro_ind = Inputs.select(new Map(metadata.map((d) => [d.description, d.id])), {label:"Colors", value: "HEIGHTM"})
+```
+
+```{ojs}
+//| echo: false
+viewof prop_ind = Inputs.select(new Map(metadata.map((d) => [d.description, d.id])), {label:"Circles", value: "N_EXPE"})
+```
+
+```{ojs}
+//| echo: false
+viewof tiles = Inputs.select(["worldStreet", "openstreetmap", "worldimagery", "opentopomap"], {
+  label: "Tiles",
+  value: "worldimagery"
+})
+```
+
+## Row {width=200%}
+
+```{ojs}
+//| echo: false
+//| output: false
+radius = viz.tool.radius(
+  peaks.features.map((d) => d.properties.N_EXPE),
+  { k: 40, fixmax: undefined }
+)
+```
+
+```{ojs}
+//| echo: false
+{
+  let svg = viz.create({
+    width: 800, 
+    domain: peaks, 
+    projection: d3.geoMercator(),
+    zoomable: true})
+  svg.tile({ url: tiles })
+  svg.plot({type: "propchoro", data: peaks, var1: prop_ind, var2: choro_ind, tip: true})
+return svg.render()
+}
+```
+
+```{ojs}
+//| output: false
+viz = require("geoviz@0.7.2")
+fixmax = d3.max(peaks.map(d => +d[indicator]))
+metadata = FileAttachment("data_conso/metadata.csv").csv()
+peaks = FileAttachment("data_conso/peak_6700_geoloc_data.geojson").json()
+types = new Map(metadata.map((d) => [d.id, d.type]))
+nbvalues = datadisplay.map(d => d[indicator]).filter(d => d!== "").length
+fixmax = d3.max(data.map(d => +d[indicator]))
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+viewof table1 = Inputs.table(types, {
+  maxHeight: "200px",
+})
+```

@@ -1,0 +1,18 @@
+id,type,description
+HEIGHTM,stock,Peak height
+OPEN,categorical,Is open to ascent
+PYEAR,ratio,First ascent (year)
+PSUMMITERS,text,First ascent (members)
+PCOUNTRY,text,First ascent (country)
+TODAYS,ratio,Median time (days) to reach the summit from base camp
+N_EXPE,stock,Expeditions
+N_SUCCESS,stock,Expeditions success
+EXPE_DEATH,stock,Expeditions that encounted a death on the summit
+SUM_EXPE_DEATH,stock,Death number
+TOT_HIRED,stock,Expeditions that have hired sherpas
+EXPE_HIRED_DEATH,stock,Expeditions that have encountered a sherpa death
+SUM_EXPE_HIRED_DEATH,stock,Sherpa death number
+SUCCESS_RT,ratio,Success rate (% of expeditions)
+DEATH_RT,ratio,Death rate (% of expeditions)
+HIRED_RT,ratio,Sherpa hired rate (% of expeditions)
+HIRED_DEATH_RT,ratio,Sherpa hired death rate (% of expeditions)

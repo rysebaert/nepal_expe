@@ -32,7 +32,6 @@ exped$SUCCESS3 <-  as.integer(as.logical(exped$SUCCESS3))
 exped$SUCCESS4 <-  as.integer(as.logical(exped$SUCCESS4))
 exped$SUCCESS <- exped$SUCCESS1 + exped$SUCCESS2 + exped$SUCCESS3 + exped$SUCCESS4
 exped["SUCCESS"][exped["SUCCESS"] >= 1] <- 1
-str(exped)
 
 # MDEATHS if > 0 expe with death
 tmp <- exped[exped$SUCCESS >= 1,]
