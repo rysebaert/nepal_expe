@@ -1,0 +1,37 @@
+---
+title: "About"
+---
+
+# Methodology
+
+All the data preparation has been made with R scripts to aggregate and prepare the data for this viewer tool. These scripts are available [here](https://github.com/rysebaert/nepal_expe/tree/main/R). It basically follows a 2-steps procedure :
+
+- Find geolocation for peaks
+- Create indicators aggregated at peaks and country level that are displayed in the dashboard.
+
+## Peak geocoding
+
+The Himalayan database is organized in several .dbf files which give information on peaks, expeditions and expeditions members.  
+
+Howewer, no information related to peak geolocation is given by the database. It has been done for all the peaks above 6700 meters (159 over the 479 Nepal Peaks). 
+
+Geolocation have been obtained following 3 steps based on the name of the peak included in the Himalayan database :
+
+- Get the geolocation based on a query on the Wikipedia database with the `wikidataR` package.
+- If the peaks locations haven't been found, try to extract this information from the OpenStreetMap database and the `osmextract` R package.
+- For the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal [Himal Peak Profile](https://nepalhimalpeakprofile.org/peak-profile/all-peaks) website.
+
+## Indicator creation
+
+Two datasets have been created, 1 for each of the 159 peaks and one at country level based on expedition members statistics. Data has been created based on peak identifier and country of belonging of expedition members.
+
+For this dataset, at [table of correspondence](https://github.com/rysebaert/nepal_expe/blob/main/data_conso/ISO3_CITIZENSHIP.csv) has been created to make possible the relationship between entries included in the `members.dbf` file and official international ISO-3 codes. Some choices have been made in that order :
+
+- **Former countries** : Citizenship related to Czechoslovakia has been rattached to Czech Republic and Yugoslavia to Serbia. 
+- **Several citizenship declared** : When several citizenship appear (e.g. *Ukraine/Azerbaijan*), the first one is only kept (*Ukraine* in this case).
+
+
+# Citation
+
+This work has been done on free time to explore possibilities offered by .ojs libraries and Quarto dashboard. I am not an Himalayist, even if I like very much **sparsely populated** mountainous areas :-)
+

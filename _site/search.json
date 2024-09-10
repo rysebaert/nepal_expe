@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nepal expedition viewer",
+    "section": "",
+    "text": "Everest Base Camp. Photo: Ilker Ender\nThis website propose some visualization of data included in the fabulous Himalayan database, which is a compilation of records for all expeditions that have climbed in the Nepal Himalaya. It takes the form of a dashboard where user can explore several dimensions of indicators included in the database.\nA section is dedicated to peak data visualization (peaks above 6700 m only), with some indicators (ascent number, first ascent, death rates, etc.). Anoter is dedicated to expedition members, where data have been aggregated a country level at several time periods."
+  },
+  {
+    "objectID": "index.html#the-himalayan-database",
+    "href": "index.html#the-himalayan-database",
+    "title": "Nepal expedition viewer",
+    "section": "The Himalayan Database",
+    "text": "The Himalayan Database\nThe Himalayan Database is a compilation of records for all expeditions that have climbed in the Nepal Himalaya. The database is based on the expedition archives of Elizabeth Hawley, a longtime journalist based in Kathmandu, and it is supplemented by information gathered from books, alpine journals and correspondence with Himalayan climbers.\nThe data cover all expeditions from 1905 through Autumn-Winter 2023 to the most significant mountaineering peaks in Nepal. Also included are expeditions to both sides of border peaks such as Everest, Cho Oyu, Makalu and Kangchenjunga as well as to some smaller border peaks. Data on expeditions to trekking peaks are included for early attempts, first ascents and major accidents.*\nEach expedition record contains detailed information including dates, routes, camps, use of supplemental oxygen, successes, deaths and accidents.\nEach expedition record contains biographical information for all members listed on the permit as well as for hired members (e.g., Sherpas) for which there are significant events such as a summit success, death, accident or rescue.\nIn 2024 (Autumn - Winter 2023 update), this database includes 479 peals, more than 11300 expedition records, 87100 members records"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "All the data preparation has been made with R scripts to aggregate and prepare the data for this viewer tool. These scripts are available here. It basically follows a 2-steps procedure :\n\nFind geolocation for peaks\nCreate indicators aggregated at peaks and country level that are displayed in the dashboard.\n\n\n\nThe Himalayan database is organized in several .dbf files which give information on peaks, expeditions and expeditions members.\nHowewer, no information related to peak geolocation is given by the database. It has been done for all the peaks above 6700 meters (159 over the 479 Nepal Peaks).\nGeolocation have been obtained following 3 steps based on the name of the peak included in the Himalayan database :\n\nGet the geolocation based on a query on the Wikipedia database with the wikidataR package.\nIf the peaks locations haven’t been found, try to extract this information from the OpenStreetMap database and the osmextract R package.\nFor the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal Himal Peak Profile website.\n\n\n\n\nTwo datasets have been created, 1 for each of the 159 peaks and one at country level based on expedition members statistics. Data has been created based on peak identifier and country of belonging of expedition members.\nFor this dataset, at table of correspondence has been created to make possible the relationship between entries included in the members.dbf file and official international ISO-3 codes. Some choices have been made in that order :\n\nFormer countries : Citizenship related to Czechoslovakia has been rattached to Czech Republic and Yugoslavia to Serbia.\nSeveral citizenship declared : When several citizenship appear (e.g. Ukraine/Azerbaijan), the first one is only kept (Ukraine in this case)."
+  },
+  {
+    "objectID": "about.html#peak-geocoding",
+    "href": "about.html#peak-geocoding",
+    "title": "About",
+    "section": "",
+    "text": "The Himalayan database is organized in several .dbf files which give information on peaks, expeditions and expeditions members.\nHowewer, no information related to peak geolocation is given by the database. It has been done for all the peaks above 6700 meters (159 over the 479 Nepal Peaks).\nGeolocation have been obtained following 3 steps based on the name of the peak included in the Himalayan database :\n\nGet the geolocation based on a query on the Wikipedia database with the wikidataR package.\nIf the peaks locations haven’t been found, try to extract this information from the OpenStreetMap database and the osmextract R package.\nFor the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal Himal Peak Profile website."
+  },
+  {
+    "objectID": "about.html#indicator-creation",
+    "href": "about.html#indicator-creation",
+    "title": "About",
+    "section": "",
+    "text": "Two datasets have been created, 1 for each of the 159 peaks and one at country level based on expedition members statistics. Data has been created based on peak identifier and country of belonging of expedition members.\nFor this dataset, at table of correspondence has been created to make possible the relationship between entries included in the members.dbf file and official international ISO-3 codes. Some choices have been made in that order :\n\nFormer countries : Citizenship related to Czechoslovakia has been rattached to Czech Republic and Yugoslavia to Serbia.\nSeveral citizenship declared : When several citizenship appear (e.g. Ukraine/Azerbaijan), the first one is only kept (Ukraine in this case)."
+  }
+]

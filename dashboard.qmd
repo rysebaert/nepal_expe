@@ -1,0 +1,198 @@
+---
+title: "View data"
+format: dashboard
+--- 
+
+# Peaks
+
+## {.toolbar}
+
+```{ojs}
+//| echo: false
+viewof prop_ind = Inputs.select(new Map(metadata.filter(d => d.type == "stock").map((d) => [d.description, d.id])), {label:"Indicator 1 : Circles", value: "N_EXPE"})
+```
+
+```{ojs}
+//| echo: false
+viewof choro_ind = Inputs.select(new Map(metadata.filter(d => d.type == "ratio").map((d) => [d.description, d.id])), {label:"Indicator 2: Color palette", value: "HEIGHTM"})
+
+```
+
+```{ojs}
+//| echo: false
+viewof tiles = Inputs.select(["worldStreet", "openstreetmap", "worldimagery", "opentopomap"], {
+  label: "Tiles",
+  value: "worldimagery"
+})
+```
+
+```{ojs}
+//| echo: false
+viewof k = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
+```
+
+## Row {width=200%}
+
+<center>
+
+```{ojs}
+//| echo: false
+
+{
+  let svg = viz.create({
+    width: 800, 
+    domain: peaks, 
+    margin: 150,
+    projection: d3.geoMercator(),
+    zoomable: true})
+  svg.tile({ url: tiles })
+  svg.plot({type: "propchoro", 
+            data: peaks,
+            var1: prop_ind,
+            var2: choro_ind,
+            nb: 5,
+            colors: "Sunset",
+            tip: `$PKCONSO`,
+            k,
+            leg1_title: "Indicator 1",
+            leg1_frame: true,
+            leg1_frame_fill : "white",
+            leg1_frame_stroke: "#ffffff50",
+            leg2_title: "Indicator 2",
+            leg2_frame: true,
+            leg2_frame_fill : "white",
+            leg2_frame_stroke: "#ffffff50"});
+  
+  svg.scalebar();
+  
+return svg.render()
+}
+```
+
+</center>
+
+# Peaks table {scrolling="true"}
+
+```{ojs}
+
+Inputs.table(data_peaks, {
+  format: {
+    HEIGHTM: sparkbar(d3.max(data_peaks, d => d.HEIGHTM)),  
+    TOTDAYS: sparkbar(d3.max(data_peaks, d => d.TOTDAYS)),
+    N_EXPE: sparkbar(d3.max(data_peaks, d => d.N_EXPE)),
+    N_SUCCESS: sparkbar(d3.max(data_peaks, d => d.N_SUCCESS)),    
+    EXPE_DEATH: sparkbar(d3.max(data_peaks, d => d.N_EXPE)),
+  }
+})
+
+```
+
+
+# Members statistics
+
+## {.toolbar}
+
+```{ojs}
+//| echo: false
+viewof prop_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "stock").map((d) => [d.description, d.id])), {label:"Indicator 1 : Circles", value: "TOT_ALL"})
+```
+
+```{ojs}
+//| echo: false
+viewof choro_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "ratio").map((d) => [d.description, d.id])), {label:"Indicator 2: Color palette", value: "EXPE_POP_ALL"})
+
+```
+
+```{ojs}
+//| echo: false
+viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
+```
+
+
+## Row {width=100%}
+
+<center>
+
+```{ojs}
+//| echo: false
+
+{
+  let svg = viz.create({
+    width: 900, 
+    domain: world, 
+    margin: 0,
+    projection: d3.geoNaturalEarth1(),
+    zoomable: true})
+    
+  svg.outline();
+  svg.path({ datum: world, fill: "white", fillOpacity: 0.3 });
+  
+  svg.plot({type: "choro", 
+            data: world,
+            var: choro_ind2,
+            nb: 5,
+            colors: "Sunset",
+            tip: `$NAMEen`,
+            leg_title: "Indicator 2",
+            leg_frame: true,
+            leg_frame_fill : "white",
+            leg_frame_stroke: "#ffffff50"});
+            
+    svg.plot({type: "prop", 
+            data: world,
+            var: prop_ind2,
+            fill: "#ffffff50",
+            tip: `$NAMEen`,
+            k: k2,
+            leg_title: "Indicator 2",
+            leg_frame: true,
+            leg_frame_fill : "white",
+            leg_pos: [0,250],
+            leg_frame_stroke: "#ffffff80"});
+  
+return svg.render()
+}
+```
+
+</center>
+
+
+```{ojs}
+//| output: false
+
+// carto
+viz = require("geoviz@0.7.2")
+dicopal = import("dicopal@0.8.1")
+
+// paramaters
+fixmax = d3.max(peaks.map(d => +d[indicator]))
+
+// peaks
+metadata = FileAttachment("data_conso/metadata.csv").csv()
+data_peaks = peaks.features.map(d => d.properties)
+peaks = FileAttachment("data_conso/peak_6700_geoloc_data.geojson").json()
+
+
+// World data
+metadata_world = FileAttachment("data_conso/metadata_world.csv").csv()
+data_world = world.features.map(d => d.properties)
+world = FileAttachment("data_conso/world_data.geojson").json()
+```
+
+```{ojs}
+//| output: false
+ 
+// Sparkbar
+function sparkbar(max) {
+  return x => htl.html`<div style="
+    background: lightblue;
+    width: ${100 * x / max}%;
+    float: right;
+    padding-right: 3px;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    justify-content: end;">${x.toLocaleString("en")}`
+}
+```
+

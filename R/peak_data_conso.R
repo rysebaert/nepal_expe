@@ -122,6 +122,9 @@ peaks$DEATH_RT <- peaks$EXPE_DEATH / peaks$N_EXPE * 100
 peaks$HIRED_RT <- peaks$TOT_HIRED / peaks$N_EXPE * 100
 peaks$HIRED_DEATH_RT <- peaks$EXPE_HIRED_DEATH / peaks$TOT_HIRED * 100
 
+# For positioning only
+peaks$pos <- 1
+
 # Export
 st_write(peaks, "./data_conso/peak_6700_geoloc_data.geojson")
 
@@ -278,7 +281,8 @@ iso$MED_YEAR <- iso$MED_YEAR / iso$TOT_ALL
 world <- st_read("./input/world_209.geojson")
 world <- world[,c("ISO3", "NAMEen", "POP_2023")]
 world <- merge(world, iso, by = "ISO3", all.x = TRUE)
+world$EXPE_POP_ALL <- world$TOT_ALL / world$POP_2023 * 1000000
+world$EXPE_MALE_ALL <- world$MALE_ALL / world$TOT_ALL * 100
+world$EXPE_LEADER_ALL <- world$LEADER_ALL / world$TOT_ALL * 100
 
 st_write(world, "./data_conso/world_data.geojson")
-
-

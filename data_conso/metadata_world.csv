@@ -1,0 +1,23 @@
+id,type,description
+ISO3,other,Country ID
+NAMEen,other,Country Name
+POP_2023,stock,Population 2023
+TOT_ALL,stock,Ascents (total number)
+MALE_ALL,stock,"Ascents (total number, males)"
+LEADER_ALL,stock,"Ascents (total number, leaders)"
+TOT_BEF_1960,stock,Ascents before 1960
+MALE_BEF_1960,other,"Ascents (total number, males, before 1960)"
+LEADER_BEF_1960,other,"Ascents (total number, leaders, before 1960)"
+TOT_1960_1980,stock,Ascents between 1960 and 1980
+MALE_1960_1980 ,other,"Ascents (total number, males, between 1960 and 1980)"
+LEADER_1960_1980 ,other,"Ascents (total number, leaders, between 1960 and 1980)"
+TOT_1960_1980,stock,Ascents between 1980 and 2000
+MALE_1960_1980 ,other,"Ascents (total number, males, between 1980 and 2000)"
+LEADER_1960_1980 ,other,"Ascents (total number, leaders, between 1980 and 2000)"
+TOT_AFT_2000,stock,Ascents after 2000
+MALE_AFT_2000,other,"Ascents (total number, males, after 2000)"
+LEADER_AFT_2000,other,"Ascents (total number, leaders, after 2000)"
+MED_YEAR,ratio,"Median year of ascent (50 % before, 50 % after)"
+EXPE_POP_ALL,ratio,Ascents per 1 million inhabitants
+EXPE_MALE_ALL,ratio,Share of males who experimented the ascent (%)
+EXPE_LEADER_ALL,ratio,Share of leaders who experimented the ascent (%)
