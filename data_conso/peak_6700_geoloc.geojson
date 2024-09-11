@@ -122,7 +122,7 @@
 { "type": "Feature", "properties": { "PEAKID": "APIM", "PKCONSO": "Api Main", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 80.92555556, 30.00527778 ] } },
 { "type": "Feature", "properties": { "PEAKID": "APIW", "PKCONSO": "Api West", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 80.92555556, 30.00166667 ] } },
 { "type": "Feature", "properties": { "PEAKID": "BTAK", "PKCONSO": "Bhairab Takura", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 85.80972222, 28.19777778 ] } },
-{ "type": "Feature", "properties": { "PEAKID": "BURK", "PKCONSO": "Burke Kang", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 87.29416667, 28.03694444 ] } },
+{ "type": "Feature", "properties": { "PEAKID": "BURK", "PKCONSO": "Burke Kang", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 86.7739, 28.03694444 ] } },
 { "type": "Feature", "properties": { "PEAKID": "CHAB", "PKCONSO": "Chabuk", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 87.9875, 27.88583333 ] } },
 { "type": "Feature", "properties": { "PEAKID": "CHAK", "PKCONSO": "Chako", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 84.28861111, 28.88055556 ] } },
 { "type": "Feature", "properties": { "PEAKID": "CHMN", "PKCONSO": "Chamar North", "src": "survey" }, "geometry": { "type": "Point", "coordinates": [ 84.94694444, 28.55527778 ] } },

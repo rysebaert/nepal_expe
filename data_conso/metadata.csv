@@ -1,19 +1,25 @@
-id,type,description
-pos,stock,Peak location only
-HEIGHTM,ratio,Peak height
-OPEN,categorical,Is open to ascent
-PYEAR,ratio,First ascent (year)
-PSUMMITERS,text,First ascent (members)
-PCOUNTRY,text,First ascent (country)
-TOTDAYS,ratio,Median time (days) to reach the summit from base camp
-N_EXPE,stock,Expeditions
-N_SUCCESS,stock,Expeditions success
-EXPE_DEATH,stock,Expeditions that encounted a death on the summit
-SUM_EXPE_DEATH,stock,Death number
-TOT_HIRED,stock,Expeditions that have hired sherpas
-EXPE_HIRED_DEATH,stock,Expeditions that have encountered a sherpa death
-SUM_EXPE_HIRED_DEATH,stock,Sherpa death number
-SUCCESS_RT,ratio,Success rate (% of expeditions)
-DEATH_RT,ratio,Death rate (% of expeditions)
-HIRED_RT,ratio,Sherpa hired rate (% of expeditions)
-HIRED_DEATH_RT,ratio,Sherpa hired death rate (% of expeditions)
+id,type,description,breaks
+PKCONSO,other,Peak name,
+HEIGHTM,ratio,Peak height,"[6700, 7000, 7500, 8000, 8500, 8849]"
+TOTDAYS,ratio,Median time (days) to reach the summit from base camp,"[1, 10, 20, 30, 40, 50, 67.5]"
+EXPE_TOT,stock,Expeditions sum,2307
+EXPE_SUCCESS,stock,Expeditions success,2307
+EXPE_HIRED,stock,Expeditions that have hired sherpas,2307
+EXPE_DEATH,stock,Expeditions that encounted a death,2307
+EXPE_SIZE,ratio,Average size of expeditions (members) ,"[1, 5, 7, 10, 27]"
+MEMBERS_TOT,stock,Members sum,16718
+MEMBERS_SUCCESS,stock,Members success,16718
+MEMBERS_HIRED,stock,Hired members,16718
+MEMBERS_DEATH,stock,Members deaths,16718
+EXPE_SUCCESS_RT,ratio,Expeditions success rate (%),"[0, 1, 25, 50, 75, 90, 100]"
+EXPE_HIRED_RT,ratio,Share of expeditions that hired sherpa (%),"[0, 1, 25, 50, 75, 90, 100]"
+EXPE_DEATH_RT,ratio,Expeditions death rate (%),"[0, 0.5, 1, 5, 10, 25, 50, 100]"
+MEMBERS_SUCCESS_RT,ratio,Members success rate (%),"[0, 1, 25, 50, 75, 90, 100]"
+MEMBERS_HIRED_RT,ratio,Share of hired members (%),"[0, 1, 25, 50, 75, 90, 100]"
+MEMBERS_DEATH_RT,ratio,Members death rate (%),"[0, 0.5, 1, 5, 10, 25, 50, 100]"
+OPEN,categorical,Is open to ascent,
+PYEAR,ratio,First ascent (year),"[1909, 1950, 1970, 1990, 2023]"
+PSUMMITERS,other,First ascent (name members),
+PCOUNTRY,other,First ascent (country members),
+src,other,Geolocation data source,
+pos,stock,Peak location only,30
