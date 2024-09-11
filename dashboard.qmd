@@ -1,21 +1,20 @@
 ---
 title: "View data"
 format: dashboard
---- 
+---
 
-# Peaks
+# By peaks
 
-## {.toolbar}
+##  {.toolbar}
 
 ```{ojs}
 //| echo: false
-viewof prop_ind = Inputs.select(new Map(metadata.filter(d => d.type == "stock").map((d) => [d.description, d.id])), {label:"Indicator 1 : Circles", value: "N_EXPE"})
+viewof prop_ind = Inputs.select(new Map(metadata.filter(d => d.type == "stock").map((d) => [d.description, d.id])), {label:"Indicator 1 : Circles", value: "pos"})
 ```
 
 ```{ojs}
 //| echo: false
 viewof choro_ind = Inputs.select(new Map(metadata.filter(d => d.type == "ratio").map((d) => [d.description, d.id])), {label:"Indicator 2: Color palette", value: "HEIGHTM"})
-
 ```
 
 ```{ojs}
@@ -31,7 +30,7 @@ viewof tiles = Inputs.select(["worldStreet", "openstreetmap", "worldimagery", "o
 viewof k = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
 ```
 
-## Row {width=200%}
+## Row {width="200%"}
 
 <center>
 
@@ -50,7 +49,8 @@ viewof k = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
             data: peaks,
             var1: prop_ind,
             var2: choro_ind,
-            nb: 5,
+            breaks: bks,
+            fixmax: valmax,
             colors: "Sunset",
             tip: `$PKCONSO`,
             k,
@@ -79,18 +79,29 @@ Inputs.table(data_peaks, {
   format: {
     HEIGHTM: sparkbar(d3.max(data_peaks, d => d.HEIGHTM)),  
     TOTDAYS: sparkbar(d3.max(data_peaks, d => d.TOTDAYS)),
-    N_EXPE: sparkbar(d3.max(data_peaks, d => d.N_EXPE)),
-    N_SUCCESS: sparkbar(d3.max(data_peaks, d => d.N_SUCCESS)),    
-    EXPE_DEATH: sparkbar(d3.max(data_peaks, d => d.N_EXPE)),
-  }
+    EXPE_TOT: sparkbar(d3.max(data_peaks, d => d.EXPE_TOT)),
+    EXPE_SUCCESS: sparkbar(d3.max(data_peaks, d => d.EXPE_TOT)),    
+    EXPE_HIRED: sparkbar(d3.max(data_peaks, d => d.EXPE_TOT)),
+    EXPE_DEATH: sparkbar(d3.max(data_peaks, d => d.EXPE_TOT)),
+    MEMBERS_TOT: sparkbar(d3.max(data_peaks, d => d.MEMBERS_TOT)),
+    MEMBERS_SUCCESS: sparkbar(d3.max(data_peaks, d => d.MEMBERS_TOT)),    
+    MEMBERS_HIRED: sparkbar(d3.max(data_peaks, d => d.MEMBERS_TOT)),
+    MEMBERS_DEATH: sparkbar(d3.max(data_peaks, d => d.MEMBERS_TOT)),
+    EXPE_SUCCESS_RT: sparkbar(d3.max(data_peaks, d => d.EXPE_SUCCESS_RT)),    
+    EXPE_HIRED_RT: sparkbar(d3.max(data_peaks, d => d.EXPE_SUCCESS_RT)),        
+    EXPE_DEATH_RT: sparkbar(d3.max(data_peaks, d => d.EXPE_SUCCESS_RT)),
+    MEMBERS_SUCCESS_RT: sparkbar(d3.max(data_peaks, d => d.MEMBERS_SUCCESS_RT)),    
+    MEMBERS_HIRED_RT: sparkbar(d3.max(data_peaks, d => d.MEMBERS_SUCCESS_RT)),        
+    MEMBERS_DEATH_RT: sparkbar(d3.max(data_peaks, d => d.MEMBERS_SUCCESS_RT))
+  },
+  rows:1000
 })
 
 ```
 
+# By country
 
-# Members statistics
-
-## {.toolbar}
+##  {.toolbar}
 
 ```{ojs}
 //| echo: false
@@ -99,8 +110,7 @@ viewof prop_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "s
 
 ```{ojs}
 //| echo: false
-viewof choro_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "ratio").map((d) => [d.description, d.id])), {label:"Indicator 2: Color palette", value: "EXPE_POP_ALL"})
-
+viewof choro_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "ratio").map((d) => [d.description, d.id])), {label:"Indicator 2: Color palette", value: "RT_POP"})
 ```
 
 ```{ojs}
@@ -108,8 +118,7 @@ viewof choro_ind2 = Inputs.select(new Map(metadata_world.filter(d => d.type == "
 viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
 ```
 
-
-## Row {width=100%}
+## Row {width="100%"}
 
 <center>
 
@@ -130,24 +139,26 @@ viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
   svg.plot({type: "choro", 
             data: world,
             var: choro_ind2,
-            nb: 5,
             colors: "Sunset",
             tip: `$NAMEen`,
+            breaks: bks2,
+            leg_pos: [0,250],
             leg_title: "Indicator 2",
             leg_frame: true,
+            leg_missing_text: "No ascent",
             leg_frame_fill : "white",
             leg_frame_stroke: "#ffffff50"});
             
     svg.plot({type: "prop", 
             data: world,
             var: prop_ind2,
-            fill: "#ffffff50",
             tip: `$NAMEen`,
+            fill: "#ffffff50",
             k: k2,
-            leg_title: "Indicator 2",
+            fixmax: valmax2,
+            leg_title: "Indicator 1",
             leg_frame: true,
             leg_frame_fill : "white",
-            leg_pos: [0,250],
             leg_frame_stroke: "#ffffff80"});
   
 return svg.render()
@@ -155,6 +166,79 @@ return svg.render()
 ```
 
 </center>
+
+
+# Country table {scrolling="true"}
+
+```{ojs}
+
+Inputs.table(data_world, {
+  format: {
+    POP_2023: sparkbar(d3.max(data_world, d => d.POP_2023)),  
+    TOT_ALL: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    FEMALE_ALL: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    LEADER_ALL: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    LEADER_ALL: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    TOT_BEF_1950: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    TOT_1950_1969: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    TOT_1970_1989: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    TOT_AFT_1990: sparkbar(d3.max(data_world, d => d.TOT_ALL)),
+    MED_YEAR: sparkbar(d3.max(data_world, d => d.MED_YEAR)),
+    RT_POP: sparkbar(d3.max(data_world, d => d.RT_POP)),
+    RT_FEMALE: sparkbar(d3.max(data_world, d => d.RT_FEMALE)),   
+    RT_LEADER: sparkbar(d3.max(data_world, d => d.RT_LEADER)),
+    RT_1950: sparkbar(d3.max(data_world, d => d.RT_1950)),
+    RT_1950_1969: sparkbar(d3.max(data_world, d => d.RT_1950_1969)),   
+    RT_1970_1989: sparkbar(d3.max(data_world, d => d.RT_1970_1989)),   
+    RT_1990: sparkbar(d3.max(data_world, d => d.RT_1990))
+  },
+  
+  rows:1000
+})
+
+```
+
+
+
+```{ojs}
+//| output: false
+ 
+// Define breaks manually Map 1
+bks = metadata
+  .find((d) => d.id == choro_ind)
+  .breaks.replace("[", "")
+  .replace("]", "")
+  .split(",")
+  .map((d) => parseFloat(d))
+  
+valmax = metadata
+  .find((d) => d.id == prop_ind)
+  .breaks.replace("[", "")
+  .replace("]", "")
+  .split(",")
+  .map((d) => parseFloat(d))
+```
+
+
+```{ojs}
+//| output: false
+ 
+// Define breaks manually Map2
+bks2 = metadata_world
+  .find((d) => d.id == choro_ind2)
+  .breaks.replace("[", "")
+  .replace("]", "")
+  .split(",")
+  .map((d) => parseFloat(d))
+  
+valmax2 = metadata_world
+  .find((d) => d.id == prop_ind2)
+  .breaks.replace("[", "")
+  .replace("]", "")
+  .split(",")
+  .map((d) => parseFloat(d))
+```
+
 
 
 ```{ojs}
@@ -195,4 +279,3 @@ function sparkbar(max) {
     justify-content: end;">${x.toLocaleString("en")}`
 }
 ```
-
