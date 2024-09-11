@@ -1,23 +1,19 @@
-id,type,description
-ISO3,other,Country ID
-NAMEen,other,Country Name
-POP_2023,stock,Population 2023
-TOT_ALL,stock,Ascents (total number)
-MALE_ALL,stock,"Ascents (total number, males)"
-LEADER_ALL,stock,"Ascents (total number, leaders)"
-TOT_BEF_1960,stock,Ascents before 1960
-MALE_BEF_1960,other,"Ascents (total number, males, before 1960)"
-LEADER_BEF_1960,other,"Ascents (total number, leaders, before 1960)"
-TOT_1960_1980,stock,Ascents between 1960 and 1980
-MALE_1960_1980 ,other,"Ascents (total number, males, between 1960 and 1980)"
-LEADER_1960_1980 ,other,"Ascents (total number, leaders, between 1960 and 1980)"
-TOT_1960_1980,stock,Ascents between 1980 and 2000
-MALE_1960_1980 ,other,"Ascents (total number, males, between 1980 and 2000)"
-LEADER_1960_1980 ,other,"Ascents (total number, leaders, between 1980 and 2000)"
-TOT_AFT_2000,stock,Ascents after 2000
-MALE_AFT_2000,other,"Ascents (total number, males, after 2000)"
-LEADER_AFT_2000,other,"Ascents (total number, leaders, after 2000)"
-MED_YEAR,ratio,"Median year of ascent (50 % before, 50 % after)"
-EXPE_POP_ALL,ratio,Ascents per 1 million inhabitants
-EXPE_MALE_ALL,ratio,Share of males who experimented the ascent (%)
-EXPE_LEADER_ALL,ratio,Share of leaders who experimented the ascent (%)
+id,type,description,breaks
+ISO3,other,Country ID,
+NAMEen,other,Country Name,
+POP_2023,stock,Population 2023,1428627663
+TOT_ALL,stock,Ascents (total number),20145
+FEMALE_ALL,stock,"Ascents (total number, females)",20145
+LEADER_ALL,stock,"Ascents (total number, leaders)",20145
+TOT_BEF_1950,stock,Exploratorary period ascents (before 1950),18172
+TOT_1950_1969,stock,Expeditionary period ascents (1950-1969),18172
+TOT_1970_1989,stock,Transitional period ascents (1969-1989),18172
+TOT_AFT_1990,stock,Commercial period ascents (after 1990),18172
+MED_YEAR,ratio,"Median year of ascent (50 % before, 50 % after)","[1986, 1995, 2000, 2005, 2010, 2015, 2020, 2023]"
+RT_POP,ratio,Ascents per 1 million inhabitants,"[0.02, 1, 5, 10, 50, 100, 653]"
+RT_FEMALE,ratio,Share of women in ascent members (%),"[0, 1, 5, 10, 25, 50, 100]"
+RT_LEADER,ratio,Share of leaders in ascent members (%),"[0, 1, 5, 10, 25, 50, 100]"
+RT_1950,ratio,"Share of ascents in the exploratory period (before 1950, %)","[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]"
+RT_1950_1969,ratio,"Share of ascents in the expeditionary period (1950-1969, %)","[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]"
+RT_1970_1989,ratio,"Share of ascents in the transitional period (1969-1989, %)","[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]"
+RT_1990,ratio,"Share of ascents in the commercial period (after 1990, %)","[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]"

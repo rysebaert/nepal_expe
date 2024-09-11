@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-peaks" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#peaks" data-scrolling="false" href="#peaks" aria-controls="peaks" aria-selected="true"><span class="nav-link-text">Peaks</span></a></li><li class="nav-item" role="presentation"><a id="tab-peaks-table" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#peaks-table" data-scrolling="true" href="#peaks-table" aria-controls="peaks-table" aria-selected="false"><span class="nav-link-text">Peaks table</span></a></li><li class="nav-item" role="presentation"><a id="tab-members-statistics" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#members-statistics" data-scrolling="false" href="#members-statistics" aria-controls="members-statistics" aria-selected="false"><span class="nav-link-text">Members statistics</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-by-peaks" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#by-peaks" data-scrolling="false" href="#by-peaks" aria-controls="by-peaks" aria-selected="true"><span class="nav-link-text">By peaks</span></a></li><li class="nav-item" role="presentation"><a id="tab-peaks-table" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#peaks-table" data-scrolling="true" href="#peaks-table" aria-controls="peaks-table" aria-selected="false"><span class="nav-link-text">Peaks table</span></a></li><li class="nav-item" role="presentation"><a id="tab-by-country" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#by-country" data-scrolling="false" href="#by-country" aria-controls="by-country" aria-selected="false"><span class="nav-link-text">By country</span></a></li><li class="nav-item" role="presentation"><a id="tab-country-table" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#country-table" data-scrolling="true" href="#country-table" aria-controls="country-table" aria-selected="false"><span class="nav-link-text">Country table</span></a></li></ul></div></div>
 </nav>
 </header></header>
 <!-- content -->
@@ -176,9 +176,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 
 <div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div id="peaks" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-peaks">
+<div id="by-peaks" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-by-peaks">
 <div class="html-fill-item html-fill-container dashboard-toolbar-container"><div class="toolbar html-fill-container" data-layout="flow">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="11" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 10;"><span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>viewof prop_ind <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"stock"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 1 : Circles"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"N_EXPE"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="11" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 10;"><span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>viewof prop_ind <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"stock"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 1 : Circles"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"pos"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -190,16 +190,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="22" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 21;"><span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>viewof tiles <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>([<span class="st">"worldStreet"</span><span class="op">,</span> <span class="st">"openstreetmap"</span><span class="op">,</span> <span class="st">"worldimagery"</span><span class="op">,</span> <span class="st">"opentopomap"</span>]<span class="op">,</span> {</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Tiles"</span><span class="op">,</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"worldimagery"</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="21" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 20;"><span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>viewof tiles <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>([<span class="st">"worldStreet"</span><span class="op">,</span> <span class="st">"openstreetmap"</span><span class="op">,</span> <span class="st">"worldimagery"</span><span class="op">,</span> <span class="st">"opentopomap"</span>]<span class="op">,</span> {</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Tiles"</span><span class="op">,</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"worldimagery"</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="30" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 29;"><span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>viewof k <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Circle size"</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span><span class="dv">30</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="29" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 28;"><span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>viewof k <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Circle size"</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span><span class="dv">30</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -211,19 +211,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 grid-auto-rows: minmax(0, 1fr);">
 <center><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb5" data-startfrom="39" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 38;"><span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> svg <span class="op">=</span> viz<span class="op">.</span><span class="fu">create</span>({</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span><span class="op">,</span> </span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> peaks<span class="op">,</span> </span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">margin</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="dt">projection</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">geoMercator</span>()<span class="op">,</span></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoomable</span><span class="op">:</span> <span class="kw">true</span>})</span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">tile</span>({ <span class="dt">url</span><span class="op">:</span> tiles })</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"propchoro"</span><span class="op">,</span> </span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> peaks<span class="op">,</span></span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>            <span class="dt">var1</span><span class="op">:</span> prop_ind<span class="op">,</span></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>            <span class="dt">var2</span><span class="op">:</span> choro_ind<span class="op">,</span></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>            <span class="dt">nb</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span></span>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb5" data-startfrom="38" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 37;"><span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> svg <span class="op">=</span> viz<span class="op">.</span><span class="fu">create</span>({</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">800</span><span class="op">,</span> </span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> peaks<span class="op">,</span> </span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">margin</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">projection</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">geoMercator</span>()<span class="op">,</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoomable</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">tile</span>({ <span class="dt">url</span><span class="op">:</span> tiles })</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"propchoro"</span><span class="op">,</span> </span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> peaks<span class="op">,</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>            <span class="dt">var1</span><span class="op">:</span> prop_ind<span class="op">,</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>            <span class="dt">var2</span><span class="op">:</span> choro_ind<span class="op">,</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>            <span class="dt">breaks</span><span class="op">:</span> bks<span class="op">,</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fixmax</span><span class="op">:</span> valmax<span class="op">,</span></span>
 <span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>            <span class="dt">colors</span><span class="op">:</span> <span class="st">"Sunset"</span><span class="op">,</span></span>
 <span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="vs">`$PKCONSO`</span><span class="op">,</span></span>
 <span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>            k<span class="op">,</span></span>
@@ -256,7 +257,7 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div></div>
 </div>
-<div id="peaks-table" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" data-scrolling="true" aria-labelledby="tab-peaks-table">
+<div id="peaks-table" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-scrolling="true" data-orientation="rows" aria-labelledby="tab-peaks-table">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
@@ -264,11 +265,23 @@ grid-auto-rows: minmax(0, 1fr);">
 <span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
 <span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>    <span class="dt">HEIGHTM</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">HEIGHTM</span>))<span class="op">,</span>  </span>
 <span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOTDAYS</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOTDAYS</span>))<span class="op">,</span></span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>    <span class="dt">N_EXPE</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">N_EXPE</span>))<span class="op">,</span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>    <span class="dt">N_SUCCESS</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">N_SUCCESS</span>))<span class="op">,</span>    </span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_DEATH</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">N_EXPE</span>))<span class="op">,</span></span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_TOT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_SUCCESS</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_TOT</span>))<span class="op">,</span>    </span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_HIRED</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_DEATH</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_TOT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_SUCCESS</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_TOT</span>))<span class="op">,</span>    </span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_HIRED</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_DEATH</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_TOT</span>))<span class="op">,</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_SUCCESS_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_SUCCESS_RT</span>))<span class="op">,</span>    </span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_HIRED_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_SUCCESS_RT</span>))<span class="op">,</span>        </span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>    <span class="dt">EXPE_DEATH_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">EXPE_SUCCESS_RT</span>))<span class="op">,</span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_SUCCESS_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_SUCCESS_RT</span>))<span class="op">,</span>    </span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_HIRED_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_SUCCESS_RT</span>))<span class="op">,</span>        </span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MEMBERS_DEATH_RT</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_peaks<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MEMBERS_SUCCESS_RT</span>))</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>  <span class="dt">rows</span><span class="op">:</span><span class="dv">1000</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-6" data-nodetype="expression" class="html-fill-item html-fill-container">
 
@@ -283,21 +296,21 @@ grid-auto-rows: minmax(0, 1fr);">
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div>
-<div id="members-statistics" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-members-statistics">
+<div id="by-country" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-by-country">
 <div class="html-fill-item html-fill-container dashboard-toolbar-container"><div class="toolbar html-fill-container" data-layout="flow">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="96" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 95;"><span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>viewof prop_ind2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata_world<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"stock"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 1 : Circles"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"TOT_ALL"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="107" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 106;"><span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>viewof prop_ind2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata_world<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"stock"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 1 : Circles"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"TOT_ALL"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="declaration">
 
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="101" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 100;"><span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>viewof choro_ind2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata_world<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"ratio"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 2: Color palette"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"EXPE_POP_ALL"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="112" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 111;"><span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>viewof choro_ind2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(metadata_world<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">type</span> <span class="op">==</span> <span class="st">"ratio"</span>)<span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">description</span><span class="op">,</span> d<span class="op">.</span><span class="at">id</span>]))<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span><span class="st">"Indicator 2: Color palette"</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="st">"RT_POP"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="107" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 106;"><span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>viewof k2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Circle size"</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span><span class="dv">30</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="117" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>viewof k2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">4</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">"Circle size"</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span><span class="dv">30</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="declaration">
 
@@ -309,42 +322,44 @@ grid-auto-rows: minmax(0, 1fr);">
 grid-auto-rows: minmax(0, 1fr);">
 <center><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb10" data-startfrom="117" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> svg <span class="op">=</span> viz<span class="op">.</span><span class="fu">create</span>({</span>
-<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">900</span><span class="op">,</span> </span>
-<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> world<span class="op">,</span> </span>
-<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>    <span class="dt">margin</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>    <span class="dt">projection</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">geoNaturalEarth1</span>()<span class="op">,</span></span>
-<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoomable</span><span class="op">:</span> <span class="kw">true</span>})</span>
-<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">outline</span>()<span class="op">;</span></span>
-<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">path</span>({ <span class="dt">datum</span><span class="op">:</span> world<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.3</span> })<span class="op">;</span></span>
-<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"choro"</span><span class="op">,</span> </span>
-<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> world<span class="op">,</span></span>
-<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span><span class="op">:</span> choro_ind2<span class="op">,</span></span>
-<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>            <span class="dt">nb</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span></span>
-<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>            <span class="dt">colors</span><span class="op">:</span> <span class="st">"Sunset"</span><span class="op">,</span></span>
-<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="vs">`$NAMEen`</span><span class="op">,</span></span>
-<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_title</span><span class="op">:</span> <span class="st">"Indicator 2"</span><span class="op">,</span></span>
-<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_fill</span> <span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
-<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_stroke</span><span class="op">:</span> <span class="st">"#ffffff50"</span>})<span class="op">;</span></span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"prop"</span><span class="op">,</span> </span>
-<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> world<span class="op">,</span></span>
-<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span><span class="op">:</span> prop_ind2<span class="op">,</span></span>
-<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"#ffffff50"</span><span class="op">,</span></span>
-<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="vs">`$NAMEen`</span><span class="op">,</span></span>
-<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a>            <span class="dt">k</span><span class="op">:</span> k2<span class="op">,</span></span>
-<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_title</span><span class="op">:</span> <span class="st">"Indicator 2"</span><span class="op">,</span></span>
-<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb10" data-startfrom="126" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 125;"><span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> svg <span class="op">=</span> viz<span class="op">.</span><span class="fu">create</span>({</span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">900</span><span class="op">,</span> </span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> world<span class="op">,</span> </span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>    <span class="dt">margin</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>    <span class="dt">projection</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">geoNaturalEarth1</span>()<span class="op">,</span></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>    <span class="dt">zoomable</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">outline</span>()<span class="op">;</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">path</span>({ <span class="dt">datum</span><span class="op">:</span> world<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.3</span> })<span class="op">;</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"choro"</span><span class="op">,</span> </span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> world<span class="op">,</span></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span><span class="op">:</span> choro_ind2<span class="op">,</span></span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>            <span class="dt">colors</span><span class="op">:</span> <span class="st">"Sunset"</span><span class="op">,</span></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="vs">`$NAMEen`</span><span class="op">,</span></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>            <span class="dt">breaks</span><span class="op">:</span> bks2<span class="op">,</span></span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_pos</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span><span class="dv">250</span>]<span class="op">,</span></span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_title</span><span class="op">:</span> <span class="st">"Indicator 2"</span><span class="op">,</span></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_missing_text</span><span class="op">:</span> <span class="st">"No ascent"</span><span class="op">,</span></span>
 <span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_fill</span> <span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
-<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_pos</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span><span class="dv">250</span>]<span class="op">,</span></span>
-<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_stroke</span><span class="op">:</span> <span class="st">"#ffffff80"</span>})<span class="op">;</span></span>
-<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> svg<span class="op">.</span><span class="fu">render</span>()</span>
-<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_stroke</span><span class="op">:</span> <span class="st">"#ffffff50"</span>})<span class="op">;</span></span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">plot</span>({<span class="dt">type</span><span class="op">:</span> <span class="st">"prop"</span><span class="op">,</span> </span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> world<span class="op">,</span></span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span><span class="op">:</span> prop_ind2<span class="op">,</span></span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="vs">`$NAMEen`</span><span class="op">,</span></span>
+<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"#ffffff50"</span><span class="op">,</span></span>
+<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a>            <span class="dt">k</span><span class="op">:</span> k2<span class="op">,</span></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fixmax</span><span class="op">:</span> valmax2<span class="op">,</span></span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_title</span><span class="op">:</span> <span class="st">"Indicator 1"</span><span class="op">,</span></span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_fill</span> <span class="op">:</span> <span class="st">"white"</span><span class="op">,</span></span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a>            <span class="dt">leg_frame_stroke</span><span class="op">:</span> <span class="st">"#ffffff80"</span>})<span class="op">;</span></span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> svg<span class="op">.</span><span class="fu">render</span>()</span>
+<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-10" data-nodetype="expression" class="html-fill-item html-fill-container">
 
@@ -356,116 +371,220 @@ grid-auto-rows: minmax(0, 1fr);">
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div></center><div class="cell hidden html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb11" data-startfrom="164" data-source-offset="-12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 163;"><span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a>viz <span class="op">=</span> <span class="pp">require</span>(<span class="st">"geoviz@0.7.2"</span>)</span>
-<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a>dicopal <span class="op">=</span> <span class="im">import</span>(<span class="st">"dicopal@0.8.1"</span>)</span>
-<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a><span class="co">// paramaters</span></span>
-<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>fixmax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(peaks<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="op">+</span>d[indicator]))</span>
-<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a><span class="co">// peaks</span></span>
-<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/metadata.csv"</span>)<span class="op">.</span><span class="fu">csv</span>()</span>
-<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>data_peaks <span class="op">=</span> peaks<span class="op">.</span><span class="at">features</span><span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">properties</span>)</span>
-<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a>peaks <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/peak_6700_geoloc_data.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a><span class="co">// World data</span></span>
-<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a>metadata_world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/metadata_world.csv"</span>)<span class="op">.</span><span class="fu">csv</span>()</span>
-<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>data_world <span class="op">=</span> world<span class="op">.</span><span class="at">features</span><span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">properties</span>)</span>
-<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/world_data.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-4" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-5" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-6" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-7" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-8" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container">
-<div id="ojs-cell-11-9" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div>
-</div><div class="cell hidden html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb12" data-startfrom="183" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 182;"><span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a><span class="co">// Sparkbar</span></span>
-<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sparkbar</span>(max) {</span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="</span></span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="vs">    background: lightblue;</span></span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: </span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> x <span class="op">/</span> max<span class="sc">}</span><span class="vs">%;</span></span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a><span class="vs">    float: right;</span></span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding-right: 3px;</span></span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a><span class="vs">    box-sizing: border-box;</span></span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a><span class="vs">    overflow: visible;</span></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: end;"&gt;</span><span class="sc">${</span>x<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en"</span>)<span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
-<div id="ojs-cell-12" data-nodetype="declaration" class="html-fill-item html-fill-container">
-
-</div>
-</div>
-</div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
-
-</div>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div></center>
 </div>
 </div>
 </div></div>
+</div>
+<div id="country-table" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-scrolling="true" data-orientation="rows" aria-labelledby="tab-country-table">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb11" data-startfrom="173" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 172;"><span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data_world<span class="op">,</span> {</span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a>    <span class="dt">POP_2023</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">POP_2023</span>))<span class="op">,</span>  </span>
+<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOT_ALL</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a>    <span class="dt">FEMALE_ALL</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>    <span class="dt">LEADER_ALL</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a>    <span class="dt">LEADER_ALL</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOT_BEF_1950</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOT_1950_1969</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOT_1970_1989</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a>    <span class="dt">TOT_AFT_1990</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">TOT_ALL</span>))<span class="op">,</span></span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>    <span class="dt">MED_YEAR</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">MED_YEAR</span>))<span class="op">,</span></span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_POP</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_POP</span>))<span class="op">,</span></span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_FEMALE</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_FEMALE</span>))<span class="op">,</span>   </span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_LEADER</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_LEADER</span>))<span class="op">,</span></span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_1950</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_1950</span>))<span class="op">,</span></span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_1950_1969</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_1950_1969</span>))<span class="op">,</span>   </span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_1970_1989</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_1970_1989</span>))<span class="op">,</span>   </span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a>    <span class="dt">RT_1990</span><span class="op">:</span> <span class="fu">sparkbar</span>(d3<span class="op">.</span><span class="fu">max</span>(data_world<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">RT_1990</span>))</span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a>  <span class="dt">rows</span><span class="op">:</span><span class="dv">1000</span></span>
+<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-11" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="cell hidden html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb12" data-startfrom="207" data-source-offset="-36"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 206;"><span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a>bks <span class="op">=</span> metadata</span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">find</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span> <span class="op">==</span> choro_ind)</span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="at">breaks</span><span class="op">.</span><span class="fu">replace</span>(<span class="st">"["</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">replace</span>(<span class="st">"]"</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)</span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> <span class="pp">parseFloat</span>(d))</span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>valmax <span class="op">=</span> metadata</span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">find</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span> <span class="op">==</span> prop_ind)</span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="at">breaks</span><span class="op">.</span><span class="fu">replace</span>(<span class="st">"["</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">replace</span>(<span class="st">"]"</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)</span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> <span class="pp">parseFloat</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-12-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-12-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell hidden html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb13" data-startfrom="227" data-source-offset="-35"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 226;"><span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a>bks2 <span class="op">=</span> metadata_world</span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">find</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span> <span class="op">==</span> choro_ind2)</span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="at">breaks</span><span class="op">.</span><span class="fu">replace</span>(<span class="st">"["</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">replace</span>(<span class="st">"]"</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)</span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> <span class="pp">parseFloat</span>(d))</span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a>valmax2 <span class="op">=</span> metadata_world</span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">find</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">id</span> <span class="op">==</span> prop_ind2)</span>
+<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="at">breaks</span><span class="op">.</span><span class="fu">replace</span>(<span class="st">"["</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">replace</span>(<span class="st">"]"</span><span class="op">,</span> <span class="st">""</span>)</span>
+<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">split</span>(<span class="st">","</span>)</span>
+<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">map</span>((d) <span class="kw">=&gt;</span> <span class="pp">parseFloat</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-13-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-13-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell hidden html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb14" data-startfrom="248" data-source-offset="-12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 247;"><span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a>viz <span class="op">=</span> <span class="pp">require</span>(<span class="st">"geoviz@0.7.2"</span>)</span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a>dicopal <span class="op">=</span> <span class="im">import</span>(<span class="st">"dicopal@0.8.1"</span>)</span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="co">// paramaters</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a>fixmax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>(peaks<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="op">+</span>d[indicator]))</span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a><span class="co">// peaks</span></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/metadata.csv"</span>)<span class="op">.</span><span class="fu">csv</span>()</span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a>data_peaks <span class="op">=</span> peaks<span class="op">.</span><span class="at">features</span><span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">properties</span>)</span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>peaks <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/peak_6700_geoloc_data.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a><span class="co">// World data</span></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>metadata_world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/metadata_world.csv"</span>)<span class="op">.</span><span class="fu">csv</span>()</span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a>data_world <span class="op">=</span> world<span class="op">.</span><span class="at">features</span><span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">properties</span>)</span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data_conso/world_data.geojson"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-4" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-5" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-6" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-7" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-8" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-14-9" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell hidden html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb15" data-startfrom="267" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 266;"><span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a><span class="co">// Sparkbar</span></span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sparkbar</span>(max) {</span>
+<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="</span></span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a><span class="vs">    background: lightblue;</span></span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: </span><span class="sc">${</span><span class="dv">100</span> <span class="op">*</span> x <span class="op">/</span> max<span class="sc">}</span><span class="vs">%;</span></span>
+<span id="cb15-272"><a href="#cb15-272" aria-hidden="true" tabindex="-1"></a><span class="vs">    float: right;</span></span>
+<span id="cb15-273"><a href="#cb15-273" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding-right: 3px;</span></span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a><span class="vs">    box-sizing: border-box;</span></span>
+<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a><span class="vs">    overflow: visible;</span></span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a><span class="vs">    display: flex;</span></span>
+<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a><span class="vs">    justify-content: end;"&gt;</span><span class="sc">${</span>x<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"en"</span>)<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden html-fill-item html-fill-container">
+<div id="ojs-cell-15" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
 </div>
 </div>
 
 
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwcm9wX2luZCA9IElucHV0cy5zZWxlY3QobmV3IE1hcChtZXRhZGF0YS5maWx0ZXIoZCA9PiBkLnR5cGUgPT0gXCJzdG9ja1wiKS5tYXAoKGQpID0+IFtkLmRlc2NyaXB0aW9uLCBkLmlkXSkpLCB7bGFiZWw6XCJJbmRpY2F0b3IgMSA6IENpcmNsZXNcIiwgdmFsdWU6IFwiTl9FWFBFXCJ9KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgY2hvcm9faW5kID0gSW5wdXRzLnNlbGVjdChuZXcgTWFwKG1ldGFkYXRhLmZpbHRlcihkID0+IGQudHlwZSA9PSBcInJhdGlvXCIpLm1hcCgoZCkgPT4gW2QuZGVzY3JpcHRpb24sIGQuaWRdKSksIHtsYWJlbDpcIkluZGljYXRvciAyOiBDb2xvciBwYWxldHRlXCIsIHZhbHVlOiBcIkhFSUdIVE1cIn0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgdGlsZXMgPSBJbnB1dHMuc2VsZWN0KFtcIndvcmxkU3RyZWV0XCIsIFwib3BlbnN0cmVldG1hcFwiLCBcIndvcmxkaW1hZ2VyeVwiLCBcIm9wZW50b3BvbWFwXCJdLCB7XHJcbiAgbGFiZWw6IFwiVGlsZXNcIixcclxuICB2YWx1ZTogXCJ3b3JsZGltYWdlcnlcIlxyXG59KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgayA9IElucHV0cy5yYW5nZShbNCwgNTBdLCB7IGxhYmVsOiBcIkNpcmNsZSBzaXplXCIsIHN0ZXA6IDEsIHZhbHVlOjMwIH0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG57XHJcbiAgbGV0IHN2ZyA9IHZpei5jcmVhdGUoe1xyXG4gICAgd2lkdGg6IDgwMCwgXHJcbiAgICBkb21haW46IHBlYWtzLCBcclxuICAgIG1hcmdpbjogMTUwLFxyXG4gICAgcHJvamVjdGlvbjogZDMuZ2VvTWVyY2F0b3IoKSxcclxuICAgIHpvb21hYmxlOiB0cnVlfSlcclxuICBzdmcudGlsZSh7IHVybDogdGlsZXMgfSlcclxuICBzdmcucGxvdCh7dHlwZTogXCJwcm9wY2hvcm9cIiwgXHJcbiAgICAgICAgICAgIGRhdGE6IHBlYWtzLFxyXG4gICAgICAgICAgICB2YXIxOiBwcm9wX2luZCxcclxuICAgICAgICAgICAgdmFyMjogY2hvcm9faW5kLFxyXG4gICAgICAgICAgICBuYjogNSxcclxuICAgICAgICAgICAgY29sb3JzOiBcIlN1bnNldFwiLFxyXG4gICAgICAgICAgICB0aXA6IGAkUEtDT05TT2AsXHJcbiAgICAgICAgICAgIGssXHJcbiAgICAgICAgICAgIGxlZzFfdGl0bGU6IFwiSW5kaWNhdG9yIDFcIixcclxuICAgICAgICAgICAgbGVnMV9mcmFtZTogdHJ1ZSxcclxuICAgICAgICAgICAgbGVnMV9mcmFtZV9maWxsIDogXCJ3aGl0ZVwiLFxyXG4gICAgICAgICAgICBsZWcxX2ZyYW1lX3N0cm9rZTogXCIjZmZmZmZmNTBcIixcclxuICAgICAgICAgICAgbGVnMl90aXRsZTogXCJJbmRpY2F0b3IgMlwiLFxyXG4gICAgICAgICAgICBsZWcyX2ZyYW1lOiB0cnVlLFxyXG4gICAgICAgICAgICBsZWcyX2ZyYW1lX2ZpbGwgOiBcIndoaXRlXCIsXHJcbiAgICAgICAgICAgIGxlZzJfZnJhbWVfc3Ryb2tlOiBcIiNmZmZmZmY1MFwifSk7XHJcbiAgXHJcbiAgc3ZnLnNjYWxlYmFyKCk7XHJcbiAgXHJcbnJldHVybiBzdmcucmVuZGVyKClcclxufVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLnRhYmxlKGRhdGFfcGVha3MsIHtcclxuICBmb3JtYXQ6IHtcclxuICAgIEhFSUdIVE06IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuSEVJR0hUTSkpLCAgXHJcbiAgICBUT1REQVlTOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLlRPVERBWVMpKSxcclxuICAgIE5fRVhQRTogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5OX0VYUEUpKSxcclxuICAgIE5fU1VDQ0VTUzogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5OX1NVQ0NFU1MpKSwgICAgXHJcbiAgICBFWFBFX0RFQVRIOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLk5fRVhQRSkpLFxyXG4gIH1cclxufSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwcm9wX2luZDIgPSBJbnB1dHMuc2VsZWN0KG5ldyBNYXAobWV0YWRhdGFfd29ybGQuZmlsdGVyKGQgPT4gZC50eXBlID09IFwic3RvY2tcIikubWFwKChkKSA9PiBbZC5kZXNjcmlwdGlvbiwgZC5pZF0pKSwge2xhYmVsOlwiSW5kaWNhdG9yIDEgOiBDaXJjbGVzXCIsIHZhbHVlOiBcIlRPVF9BTExcIn0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBjaG9yb19pbmQyID0gSW5wdXRzLnNlbGVjdChuZXcgTWFwKG1ldGFkYXRhX3dvcmxkLmZpbHRlcihkID0+IGQudHlwZSA9PSBcInJhdGlvXCIpLm1hcCgoZCkgPT4gW2QuZGVzY3JpcHRpb24sIGQuaWRdKSksIHtsYWJlbDpcIkluZGljYXRvciAyOiBDb2xvciBwYWxldHRlXCIsIHZhbHVlOiBcIkVYUEVfUE9QX0FMTFwifSlcclxuXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBrMiA9IElucHV0cy5yYW5nZShbNCwgNTBdLCB7IGxhYmVsOiBcIkNpcmNsZSBzaXplXCIsIHN0ZXA6IDEsIHZhbHVlOjMwIH0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxue1xyXG4gIGxldCBzdmcgPSB2aXouY3JlYXRlKHtcclxuICAgIHdpZHRoOiA5MDAsIFxyXG4gICAgZG9tYWluOiB3b3JsZCwgXHJcbiAgICBtYXJnaW46IDAsXHJcbiAgICBwcm9qZWN0aW9uOiBkMy5nZW9OYXR1cmFsRWFydGgxKCksXHJcbiAgICB6b29tYWJsZTogdHJ1ZX0pXHJcbiAgICBcclxuICBzdmcub3V0bGluZSgpO1xyXG4gIHN2Zy5wYXRoKHsgZGF0dW06IHdvcmxkLCBmaWxsOiBcIndoaXRlXCIsIGZpbGxPcGFjaXR5OiAwLjMgfSk7XHJcbiAgXHJcbiAgc3ZnLnBsb3Qoe3R5cGU6IFwiY2hvcm9cIiwgXHJcbiAgICAgICAgICAgIGRhdGE6IHdvcmxkLFxyXG4gICAgICAgICAgICB2YXI6IGNob3JvX2luZDIsXHJcbiAgICAgICAgICAgIG5iOiA1LFxyXG4gICAgICAgICAgICBjb2xvcnM6IFwiU3Vuc2V0XCIsXHJcbiAgICAgICAgICAgIHRpcDogYCROQU1FZW5gLFxyXG4gICAgICAgICAgICBsZWdfdGl0bGU6IFwiSW5kaWNhdG9yIDJcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lOiB0cnVlLFxyXG4gICAgICAgICAgICBsZWdfZnJhbWVfZmlsbCA6IFwid2hpdGVcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lX3N0cm9rZTogXCIjZmZmZmZmNTBcIn0pO1xyXG4gICAgICAgICAgICBcclxuICAgIHN2Zy5wbG90KHt0eXBlOiBcInByb3BcIiwgXHJcbiAgICAgICAgICAgIGRhdGE6IHdvcmxkLFxyXG4gICAgICAgICAgICB2YXI6IHByb3BfaW5kMixcclxuICAgICAgICAgICAgZmlsbDogXCIjZmZmZmZmNTBcIixcclxuICAgICAgICAgICAgdGlwOiBgJE5BTUVlbmAsXHJcbiAgICAgICAgICAgIGs6IGsyLFxyXG4gICAgICAgICAgICBsZWdfdGl0bGU6IFwiSW5kaWNhdG9yIDJcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lOiB0cnVlLFxyXG4gICAgICAgICAgICBsZWdfZnJhbWVfZmlsbCA6IFwid2hpdGVcIixcclxuICAgICAgICAgICAgbGVnX3BvczogWzAsMjUwXSxcclxuICAgICAgICAgICAgbGVnX2ZyYW1lX3N0cm9rZTogXCIjZmZmZmZmODBcIn0pO1xyXG4gIFxyXG5yZXR1cm4gc3ZnLnJlbmRlcigpXHJcbn1cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG4vLyBjYXJ0b1xyXG52aXogPSByZXF1aXJlKFwiZ2Vvdml6QDAuNy4yXCIpXHJcbmRpY29wYWwgPSBpbXBvcnQoXCJkaWNvcGFsQDAuOC4xXCIpXHJcblxyXG4vLyBwYXJhbWF0ZXJzXHJcbmZpeG1heCA9IGQzLm1heChwZWFrcy5tYXAoZCA9PiArZFtpbmRpY2F0b3JdKSlcclxuXHJcbi8vIHBlYWtzXHJcbm1ldGFkYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhX2NvbnNvL21ldGFkYXRhLmNzdlwiKS5jc3YoKVxyXG5kYXRhX3BlYWtzID0gcGVha3MuZmVhdHVyZXMubWFwKGQgPT4gZC5wcm9wZXJ0aWVzKVxyXG5wZWFrcyA9IEZpbGVBdHRhY2htZW50KFwiZGF0YV9jb25zby9wZWFrXzY3MDBfZ2VvbG9jX2RhdGEuZ2VvanNvblwiKS5qc29uKClcclxuXHJcblxyXG4vLyBXb3JsZCBkYXRhXHJcbm1ldGFkYXRhX3dvcmxkID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhX2NvbnNvL21ldGFkYXRhX3dvcmxkLmNzdlwiKS5jc3YoKVxyXG5kYXRhX3dvcmxkID0gd29ybGQuZmVhdHVyZXMubWFwKGQgPT4gZC5wcm9wZXJ0aWVzKVxyXG53b3JsZCA9IEZpbGVBdHRhY2htZW50KFwiZGF0YV9jb25zby93b3JsZF9kYXRhLmdlb2pzb25cIikuanNvbigpXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIgXHJcbi8vIFNwYXJrYmFyXHJcbmZ1bmN0aW9uIHNwYXJrYmFyKG1heCkge1xyXG4gIHJldHVybiB4ID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJcclxuICAgIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcclxuICAgIHdpZHRoOiAkezEwMCAqIHggLyBtYXh9JTtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDNweDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGVuZDtcIj4ke3gudG9Mb2NhbGVTdHJpbmcoXCJlblwiKX1gXHJcbn1cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcm9wX2luZCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjaG9yb19pbmQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGlsZXMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcm9wX2luZDInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2hvcm9faW5kMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdrMicpIn1dfQ==
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBwcm9wX2luZCA9IElucHV0cy5zZWxlY3QobmV3IE1hcChtZXRhZGF0YS5maWx0ZXIoZCA9PiBkLnR5cGUgPT0gXCJzdG9ja1wiKS5tYXAoKGQpID0+IFtkLmRlc2NyaXB0aW9uLCBkLmlkXSkpLCB7bGFiZWw6XCJJbmRpY2F0b3IgMSA6IENpcmNsZXNcIiwgdmFsdWU6IFwicG9zXCJ9KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgY2hvcm9faW5kID0gSW5wdXRzLnNlbGVjdChuZXcgTWFwKG1ldGFkYXRhLmZpbHRlcihkID0+IGQudHlwZSA9PSBcInJhdGlvXCIpLm1hcCgoZCkgPT4gW2QuZGVzY3JpcHRpb24sIGQuaWRdKSksIHtsYWJlbDpcIkluZGljYXRvciAyOiBDb2xvciBwYWxldHRlXCIsIHZhbHVlOiBcIkhFSUdIVE1cIn0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB0aWxlcyA9IElucHV0cy5zZWxlY3QoW1wid29ybGRTdHJlZXRcIiwgXCJvcGVuc3RyZWV0bWFwXCIsIFwid29ybGRpbWFnZXJ5XCIsIFwib3BlbnRvcG9tYXBcIl0sIHtcclxuICBsYWJlbDogXCJUaWxlc1wiLFxyXG4gIHZhbHVlOiBcIndvcmxkaW1hZ2VyeVwiXHJcbn0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBrID0gSW5wdXRzLnJhbmdlKFs0LCA1MF0sIHsgbGFiZWw6IFwiQ2lyY2xlIHNpemVcIiwgc3RlcDogMSwgdmFsdWU6MzAgfSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcbntcclxuICBsZXQgc3ZnID0gdml6LmNyZWF0ZSh7XHJcbiAgICB3aWR0aDogODAwLCBcclxuICAgIGRvbWFpbjogcGVha3MsIFxyXG4gICAgbWFyZ2luOiAxNTAsXHJcbiAgICBwcm9qZWN0aW9uOiBkMy5nZW9NZXJjYXRvcigpLFxyXG4gICAgem9vbWFibGU6IHRydWV9KVxyXG4gIHN2Zy50aWxlKHsgdXJsOiB0aWxlcyB9KVxyXG4gIHN2Zy5wbG90KHt0eXBlOiBcInByb3BjaG9yb1wiLCBcclxuICAgICAgICAgICAgZGF0YTogcGVha3MsXHJcbiAgICAgICAgICAgIHZhcjE6IHByb3BfaW5kLFxyXG4gICAgICAgICAgICB2YXIyOiBjaG9yb19pbmQsXHJcbiAgICAgICAgICAgIGJyZWFrczogYmtzLFxyXG4gICAgICAgICAgICBmaXhtYXg6IHZhbG1heCxcclxuICAgICAgICAgICAgY29sb3JzOiBcIlN1bnNldFwiLFxyXG4gICAgICAgICAgICB0aXA6IGAkUEtDT05TT2AsXHJcbiAgICAgICAgICAgIGssXHJcbiAgICAgICAgICAgIGxlZzFfdGl0bGU6IFwiSW5kaWNhdG9yIDFcIixcclxuICAgICAgICAgICAgbGVnMV9mcmFtZTogdHJ1ZSxcclxuICAgICAgICAgICAgbGVnMV9mcmFtZV9maWxsIDogXCJ3aGl0ZVwiLFxyXG4gICAgICAgICAgICBsZWcxX2ZyYW1lX3N0cm9rZTogXCIjZmZmZmZmNTBcIixcclxuICAgICAgICAgICAgbGVnMl90aXRsZTogXCJJbmRpY2F0b3IgMlwiLFxyXG4gICAgICAgICAgICBsZWcyX2ZyYW1lOiB0cnVlLFxyXG4gICAgICAgICAgICBsZWcyX2ZyYW1lX2ZpbGwgOiBcIndoaXRlXCIsXHJcbiAgICAgICAgICAgIGxlZzJfZnJhbWVfc3Ryb2tlOiBcIiNmZmZmZmY1MFwifSk7XHJcbiAgXHJcbiAgc3ZnLnNjYWxlYmFyKCk7XHJcbiAgXHJcbnJldHVybiBzdmcucmVuZGVyKClcclxufVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxuSW5wdXRzLnRhYmxlKGRhdGFfcGVha3MsIHtcclxuICBmb3JtYXQ6IHtcclxuICAgIEhFSUdIVE06IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuSEVJR0hUTSkpLCAgXHJcbiAgICBUT1REQVlTOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLlRPVERBWVMpKSxcclxuICAgIEVYUEVfVE9UOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLkVYUEVfVE9UKSksXHJcbiAgICBFWFBFX1NVQ0NFU1M6IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuRVhQRV9UT1QpKSwgICAgXHJcbiAgICBFWFBFX0hJUkVEOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLkVYUEVfVE9UKSksXHJcbiAgICBFWFBFX0RFQVRIOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLkVYUEVfVE9UKSksXHJcbiAgICBNRU1CRVJTX1RPVDogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5NRU1CRVJTX1RPVCkpLFxyXG4gICAgTUVNQkVSU19TVUNDRVNTOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLk1FTUJFUlNfVE9UKSksICAgIFxyXG4gICAgTUVNQkVSU19ISVJFRDogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5NRU1CRVJTX1RPVCkpLFxyXG4gICAgTUVNQkVSU19ERUFUSDogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5NRU1CRVJTX1RPVCkpLFxyXG4gICAgRVhQRV9TVUNDRVNTX1JUOiBzcGFya2JhcihkMy5tYXgoZGF0YV9wZWFrcywgZCA9PiBkLkVYUEVfU1VDQ0VTU19SVCkpLCAgICBcclxuICAgIEVYUEVfSElSRURfUlQ6IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuRVhQRV9TVUNDRVNTX1JUKSksICAgICAgICBcclxuICAgIEVYUEVfREVBVEhfUlQ6IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuRVhQRV9TVUNDRVNTX1JUKSksXHJcbiAgICBNRU1CRVJTX1NVQ0NFU1NfUlQ6IHNwYXJrYmFyKGQzLm1heChkYXRhX3BlYWtzLCBkID0+IGQuTUVNQkVSU19TVUNDRVNTX1JUKSksICAgIFxyXG4gICAgTUVNQkVSU19ISVJFRF9SVDogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5NRU1CRVJTX1NVQ0NFU1NfUlQpKSwgICAgICAgIFxyXG4gICAgTUVNQkVSU19ERUFUSF9SVDogc3BhcmtiYXIoZDMubWF4KGRhdGFfcGVha3MsIGQgPT4gZC5NRU1CRVJTX1NVQ0NFU1NfUlQpKVxyXG4gIH0sXHJcbiAgcm93czoxMDAwXHJcbn0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgcHJvcF9pbmQyID0gSW5wdXRzLnNlbGVjdChuZXcgTWFwKG1ldGFkYXRhX3dvcmxkLmZpbHRlcihkID0+IGQudHlwZSA9PSBcInN0b2NrXCIpLm1hcCgoZCkgPT4gW2QuZGVzY3JpcHRpb24sIGQuaWRdKSksIHtsYWJlbDpcIkluZGljYXRvciAxIDogQ2lyY2xlc1wiLCB2YWx1ZTogXCJUT1RfQUxMXCJ9KVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgY2hvcm9faW5kMiA9IElucHV0cy5zZWxlY3QobmV3IE1hcChtZXRhZGF0YV93b3JsZC5maWx0ZXIoZCA9PiBkLnR5cGUgPT0gXCJyYXRpb1wiKS5tYXAoKGQpID0+IFtkLmRlc2NyaXB0aW9uLCBkLmlkXSkpLCB7bGFiZWw6XCJJbmRpY2F0b3IgMjogQ29sb3IgcGFsZXR0ZVwiLCB2YWx1ZTogXCJSVF9QT1BcIn0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBrMiA9IElucHV0cy5yYW5nZShbNCwgNTBdLCB7IGxhYmVsOiBcIkNpcmNsZSBzaXplXCIsIHN0ZXA6IDEsIHZhbHVlOjMwIH0pXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxue1xyXG4gIGxldCBzdmcgPSB2aXouY3JlYXRlKHtcclxuICAgIHdpZHRoOiA5MDAsIFxyXG4gICAgZG9tYWluOiB3b3JsZCwgXHJcbiAgICBtYXJnaW46IDAsXHJcbiAgICBwcm9qZWN0aW9uOiBkMy5nZW9OYXR1cmFsRWFydGgxKCksXHJcbiAgICB6b29tYWJsZTogdHJ1ZX0pXHJcbiAgICBcclxuICBzdmcub3V0bGluZSgpO1xyXG4gIHN2Zy5wYXRoKHsgZGF0dW06IHdvcmxkLCBmaWxsOiBcIndoaXRlXCIsIGZpbGxPcGFjaXR5OiAwLjMgfSk7XHJcbiAgXHJcbiAgc3ZnLnBsb3Qoe3R5cGU6IFwiY2hvcm9cIiwgXHJcbiAgICAgICAgICAgIGRhdGE6IHdvcmxkLFxyXG4gICAgICAgICAgICB2YXI6IGNob3JvX2luZDIsXHJcbiAgICAgICAgICAgIGNvbG9yczogXCJTdW5zZXRcIixcclxuICAgICAgICAgICAgdGlwOiBgJE5BTUVlbmAsXHJcbiAgICAgICAgICAgIGJyZWFrczogYmtzMixcclxuICAgICAgICAgICAgbGVnX3BvczogWzAsMjUwXSxcclxuICAgICAgICAgICAgbGVnX3RpdGxlOiBcIkluZGljYXRvciAyXCIsXHJcbiAgICAgICAgICAgIGxlZ19mcmFtZTogdHJ1ZSxcclxuICAgICAgICAgICAgbGVnX21pc3NpbmdfdGV4dDogXCJObyBhc2NlbnRcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lX2ZpbGwgOiBcIndoaXRlXCIsXHJcbiAgICAgICAgICAgIGxlZ19mcmFtZV9zdHJva2U6IFwiI2ZmZmZmZjUwXCJ9KTtcclxuICAgICAgICAgICAgXHJcbiAgICBzdmcucGxvdCh7dHlwZTogXCJwcm9wXCIsIFxyXG4gICAgICAgICAgICBkYXRhOiB3b3JsZCxcclxuICAgICAgICAgICAgdmFyOiBwcm9wX2luZDIsXHJcbiAgICAgICAgICAgIHRpcDogYCROQU1FZW5gLFxyXG4gICAgICAgICAgICBmaWxsOiBcIiNmZmZmZmY1MFwiLFxyXG4gICAgICAgICAgICBrOiBrMixcclxuICAgICAgICAgICAgZml4bWF4OiB2YWxtYXgyLFxyXG4gICAgICAgICAgICBsZWdfdGl0bGU6IFwiSW5kaWNhdG9yIDFcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lOiB0cnVlLFxyXG4gICAgICAgICAgICBsZWdfZnJhbWVfZmlsbCA6IFwid2hpdGVcIixcclxuICAgICAgICAgICAgbGVnX2ZyYW1lX3N0cm9rZTogXCIjZmZmZmZmODBcIn0pO1xyXG4gIFxyXG5yZXR1cm4gc3ZnLnJlbmRlcigpXHJcbn1cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5JbnB1dHMudGFibGUoZGF0YV93b3JsZCwge1xyXG4gIGZvcm1hdDoge1xyXG4gICAgUE9QXzIwMjM6IHNwYXJrYmFyKGQzLm1heChkYXRhX3dvcmxkLCBkID0+IGQuUE9QXzIwMjMpKSwgIFxyXG4gICAgVE9UX0FMTDogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5UT1RfQUxMKSksXHJcbiAgICBGRU1BTEVfQUxMOiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlRPVF9BTEwpKSxcclxuICAgIExFQURFUl9BTEw6IHNwYXJrYmFyKGQzLm1heChkYXRhX3dvcmxkLCBkID0+IGQuVE9UX0FMTCkpLFxyXG4gICAgTEVBREVSX0FMTDogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5UT1RfQUxMKSksXHJcbiAgICBUT1RfQkVGXzE5NTA6IHNwYXJrYmFyKGQzLm1heChkYXRhX3dvcmxkLCBkID0+IGQuVE9UX0FMTCkpLFxyXG4gICAgVE9UXzE5NTBfMTk2OTogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5UT1RfQUxMKSksXHJcbiAgICBUT1RfMTk3MF8xOTg5OiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlRPVF9BTEwpKSxcclxuICAgIFRPVF9BRlRfMTk5MDogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5UT1RfQUxMKSksXHJcbiAgICBNRURfWUVBUjogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5NRURfWUVBUikpLFxyXG4gICAgUlRfUE9QOiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlJUX1BPUCkpLFxyXG4gICAgUlRfRkVNQUxFOiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlJUX0ZFTUFMRSkpLCAgIFxyXG4gICAgUlRfTEVBREVSOiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlJUX0xFQURFUikpLFxyXG4gICAgUlRfMTk1MDogc3BhcmtiYXIoZDMubWF4KGRhdGFfd29ybGQsIGQgPT4gZC5SVF8xOTUwKSksXHJcbiAgICBSVF8xOTUwXzE5Njk6IHNwYXJrYmFyKGQzLm1heChkYXRhX3dvcmxkLCBkID0+IGQuUlRfMTk1MF8xOTY5KSksICAgXHJcbiAgICBSVF8xOTcwXzE5ODk6IHNwYXJrYmFyKGQzLm1heChkYXRhX3dvcmxkLCBkID0+IGQuUlRfMTk3MF8xOTg5KSksICAgXHJcbiAgICBSVF8xOTkwOiBzcGFya2JhcihkMy5tYXgoZGF0YV93b3JsZCwgZCA9PiBkLlJUXzE5OTApKVxyXG4gIH0sXHJcbiAgXHJcbiAgcm93czoxMDAwXHJcbn0pXHJcblxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiIFxyXG4vLyBEZWZpbmUgYnJlYWtzIG1hbnVhbGx5IE1hcCAxXHJcbmJrcyA9IG1ldGFkYXRhXHJcbiAgLmZpbmQoKGQpID0+IGQuaWQgPT0gY2hvcm9faW5kKVxyXG4gIC5icmVha3MucmVwbGFjZShcIltcIiwgXCJcIilcclxuICAucmVwbGFjZShcIl1cIiwgXCJcIilcclxuICAuc3BsaXQoXCIsXCIpXHJcbiAgLm1hcCgoZCkgPT4gcGFyc2VGbG9hdChkKSlcclxuICBcclxudmFsbWF4ID0gbWV0YWRhdGFcclxuICAuZmluZCgoZCkgPT4gZC5pZCA9PSBwcm9wX2luZClcclxuICAuYnJlYWtzLnJlcGxhY2UoXCJbXCIsIFwiXCIpXHJcbiAgLnJlcGxhY2UoXCJdXCIsIFwiXCIpXHJcbiAgLnNwbGl0KFwiLFwiKVxyXG4gIC5tYXAoKGQpID0+IHBhcnNlRmxvYXQoZCkpXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIgXHJcbi8vIERlZmluZSBicmVha3MgbWFudWFsbHkgTWFwMlxyXG5ia3MyID0gbWV0YWRhdGFfd29ybGRcclxuICAuZmluZCgoZCkgPT4gZC5pZCA9PSBjaG9yb19pbmQyKVxyXG4gIC5icmVha3MucmVwbGFjZShcIltcIiwgXCJcIilcclxuICAucmVwbGFjZShcIl1cIiwgXCJcIilcclxuICAuc3BsaXQoXCIsXCIpXHJcbiAgLm1hcCgoZCkgPT4gcGFyc2VGbG9hdChkKSlcclxuICBcclxudmFsbWF4MiA9IG1ldGFkYXRhX3dvcmxkXHJcbiAgLmZpbmQoKGQpID0+IGQuaWQgPT0gcHJvcF9pbmQyKVxyXG4gIC5icmVha3MucmVwbGFjZShcIltcIiwgXCJcIilcclxuICAucmVwbGFjZShcIl1cIiwgXCJcIilcclxuICAuc3BsaXQoXCIsXCIpXHJcbiAgLm1hcCgoZCkgPT4gcGFyc2VGbG9hdChkKSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG4vLyBjYXJ0b1xyXG52aXogPSByZXF1aXJlKFwiZ2Vvdml6QDAuNy4yXCIpXHJcbmRpY29wYWwgPSBpbXBvcnQoXCJkaWNvcGFsQDAuOC4xXCIpXHJcblxyXG4vLyBwYXJhbWF0ZXJzXHJcbmZpeG1heCA9IGQzLm1heChwZWFrcy5tYXAoZCA9PiArZFtpbmRpY2F0b3JdKSlcclxuXHJcbi8vIHBlYWtzXHJcbm1ldGFkYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhX2NvbnNvL21ldGFkYXRhLmNzdlwiKS5jc3YoKVxyXG5kYXRhX3BlYWtzID0gcGVha3MuZmVhdHVyZXMubWFwKGQgPT4gZC5wcm9wZXJ0aWVzKVxyXG5wZWFrcyA9IEZpbGVBdHRhY2htZW50KFwiZGF0YV9jb25zby9wZWFrXzY3MDBfZ2VvbG9jX2RhdGEuZ2VvanNvblwiKS5qc29uKClcclxuXHJcblxyXG4vLyBXb3JsZCBkYXRhXHJcbm1ldGFkYXRhX3dvcmxkID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhX2NvbnNvL21ldGFkYXRhX3dvcmxkLmNzdlwiKS5jc3YoKVxyXG5kYXRhX3dvcmxkID0gd29ybGQuZmVhdHVyZXMubWFwKGQgPT4gZC5wcm9wZXJ0aWVzKVxyXG53b3JsZCA9IEZpbGVBdHRhY2htZW50KFwiZGF0YV9jb25zby93b3JsZF9kYXRhLmdlb2pzb25cIikuanNvbigpXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiIgXHJcbi8vIFNwYXJrYmFyXHJcbmZ1bmN0aW9uIHNwYXJrYmFyKG1heCkge1xyXG4gIHJldHVybiB4ID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJcclxuICAgIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcclxuICAgIHdpZHRoOiAkezEwMCAqIHggLyBtYXh9JTtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDNweDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGVuZDtcIj4ke3gudG9Mb2NhbGVTdHJpbmcoXCJlblwiKX1gXHJcbn1cclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcm9wX2luZCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjaG9yb19pbmQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGlsZXMnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdwcm9wX2luZDInKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2hvcm9faW5kMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdrMicpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -148,8 +182,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Get the geolocation based on a query on the Wikipedia database with the <code>wikidataR</code> package.</li>
 <li>If the peaks locations haven’t been found, try to extract this information from the OpenStreetMap database and the <code>osmextract</code> R package.</li>
-<li>For the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal <a href="https://nepalhimalpeakprofile.org/peak-profile/all-peaks">Himal Peak Profile</a> website.</li>
+<li>For the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal <a href="https://nepalhimalpeakprofile.org/peak-profile/all-peaks">Himal Peak Profile</a> website. In this step, some unknown location peaks have been aggregated. For instance, Fang and Glacier Dome have been rattached to Annapurna I peak, Churen Himal Central, East and West (no precise location found) have been aggregated to Churen, Domo Kang and Domo to Domo, etc.</li>
 </ul>
+<p>All this consolidation output can be found in <a href="https://github.com/rysebaert/nepal_expe/blob/main/data_conso/peaks_osm_wiki_6700.csv">this file</a>. If the column wiki is set by 1, it means that the location of the peak has been identified with Wikipedia. If osm, osm.x and osm.y is defined by 1 value, it means that peak coordinates has been identified with OpenStreetMap (OSM value <em>name</em>, <em>int_name</em> and <em>en_name</em>). Finally the column PKCONSO gives aggregated name for undefined locations (14 peaks).</p>
+<p>This consolidation process could for sure be improved. But, well, it works at the moment :-)</p>
 </section>
 <section id="indicator-creation" class="level2">
 <h2 class="anchored" data-anchor-id="indicator-creation">Indicator creation</h2>
@@ -161,9 +197,347 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+<section id="consolidated-datasets" class="level1">
+<h1>Consolidated datasets</h1>
+<p>2 geojson files are created, 1 is used for peak visualization and 1 for expedition members at country level. The column is the description shows if the data is used for the mapping or not (stock for proportional circles, ratio for color palettes other being not directly mapped but can be used for labeling).</p>
+<section id="peak-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="peak-indicators">Peak indicators</h2>
+<div class="cell">
+<div id="tbl-1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Listing of consolidated indicators for peaks above 6700m
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 44%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">description</th>
+<th style="text-align: left;">breaks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PKCONSO</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">Peak name</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HEIGHTM</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Peak height</td>
+<td style="text-align: left;">[6700, 7000, 7500, 8000, 8500, 8849]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TOTDAYS</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Median time (days) to reach the summit from base camp</td>
+<td style="text-align: left;">[1, 10, 20, 30, 40, 50, 67.5]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EXPE_TOT</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Expeditions sum</td>
+<td style="text-align: left;">2307</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EXPE_SUCCESS</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Expeditions success</td>
+<td style="text-align: left;">2307</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EXPE_HIRED</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Expeditions that have hired sherpas</td>
+<td style="text-align: left;">2307</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EXPE_DEATH</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Expeditions that encounted a death</td>
+<td style="text-align: left;">2307</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EXPE_SIZE</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Average size of expeditions (members)</td>
+<td style="text-align: left;">[1, 5, 7, 10, 27]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MEMBERS_TOT</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Members sum</td>
+<td style="text-align: left;">16718</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MEMBERS_SUCCESS</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Members success</td>
+<td style="text-align: left;">16718</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MEMBERS_HIRED</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Hired members</td>
+<td style="text-align: left;">16718</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MEMBERS_DEATH</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Members deaths</td>
+<td style="text-align: left;">16718</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EXPE_SUCCESS_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Expeditions success rate (%)</td>
+<td style="text-align: left;">[0, 1, 25, 50, 75, 90, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EXPE_HIRED_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of expeditions that hired sherpa (%)</td>
+<td style="text-align: left;">[0, 1, 25, 50, 75, 90, 100]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EXPE_DEATH_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Expeditions death rate (%)</td>
+<td style="text-align: left;">[0, 0.5, 1, 5, 10, 25, 50, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MEMBERS_SUCCESS_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Members success rate (%)</td>
+<td style="text-align: left;">[0, 1, 25, 50, 75, 90, 100]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MEMBERS_HIRED_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of hired members (%)</td>
+<td style="text-align: left;">[0, 1, 25, 50, 75, 90, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MEMBERS_DEATH_RT</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Members death rate (%)</td>
+<td style="text-align: left;">[0, 0.5, 1, 5, 10, 25, 50, 100]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OPEN</td>
+<td style="text-align: left;">categorical</td>
+<td style="text-align: left;">Is open to ascent</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PYEAR</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">First ascent (year)</td>
+<td style="text-align: left;">[1909, 1950, 1970, 1990, 2023]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PSUMMITERS</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">First ascent (name members)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PCOUNTRY</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">First ascent (country members)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">src</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">Geolocation data source</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pos</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Peak location only</td>
+<td style="text-align: left;">30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="country-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="country-indicators">Country indicators</h2>
+<div class="cell">
+<div id="tbl-2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Listing of consolidated indicators at country level
+</figcaption>
+<div aria-describedby="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 4%">
+<col style="width: 46%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">description</th>
+<th style="text-align: left;">breaks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ISO3</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">Country ID</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NAMEen</td>
+<td style="text-align: left;">other</td>
+<td style="text-align: left;">Country Name</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">POP_2023</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Population 2023</td>
+<td style="text-align: left;">1428627663</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TOT_ALL</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Ascents (total number)</td>
+<td style="text-align: left;">20145</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FEMALE_ALL</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Ascents (total number, females)</td>
+<td style="text-align: left;">20145</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LEADER_ALL</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Ascents (total number, leaders)</td>
+<td style="text-align: left;">20145</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TOT_BEF_1950</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Exploratorary period ascents (before 1950)</td>
+<td style="text-align: left;">18172</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TOT_1950_1969</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Expeditionary period ascents (1950-1969)</td>
+<td style="text-align: left;">18172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TOT_1970_1989</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Transitional period ascents (1969-1989)</td>
+<td style="text-align: left;">18172</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TOT_AFT_1990</td>
+<td style="text-align: left;">stock</td>
+<td style="text-align: left;">Commercial period ascents (after 1990)</td>
+<td style="text-align: left;">18172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MED_YEAR</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Median year of ascent (50&nbsp;% before, 50&nbsp;% after)</td>
+<td style="text-align: left;">[1986, 1995, 2000, 2005, 2010, 2015, 2020, 2023]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RT_POP</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Ascents per 1 million inhabitants</td>
+<td style="text-align: left;">[0.02, 1, 5, 10, 50, 100, 653]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RT_FEMALE</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of women in ascent members (%)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RT_LEADER</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of leaders in ascent members (%)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 100]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RT_1950</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of ascents in the exploratory period (before 1950, %)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RT_1950_1969</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of ascents in the expeditionary period (1950-1969, %)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RT_1970_1989</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of ascents in the transitional period (1969-1989, %)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RT_1990</td>
+<td style="text-align: left;">ratio</td>
+<td style="text-align: left;">Share of ascents in the commercial period (after 1990, %)</td>
+<td style="text-align: left;">[0, 1, 5, 10, 25, 50, 75, 90, 95, 100]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</section>
 <section id="citation" class="level1">
 <h1>Citation</h1>
-<p>This work has been done on free time to explore possibilities offered by .ojs libraries and Quarto dashboard. I am not an Himalayist, even if I like very much <strong>sparsely populated</strong> mountainous areas :-)</p>
+<p>For attribution, please cite this work as:</p>
+<p>BibTeX citation :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>@online{ysebaert,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  author = {Ronan Ysebaert},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  editor = {},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  title = {Nepal expeditions wiewer},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  date = {2024},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  langid = {en}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://rysebaert.gitpages.huma-num.fr/cv/">Ysebaert Ronan</a>, 2024, Nepal expeditions viewer.</p>
+<p align="center">
+<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" class="img-fluid" alt="License: CC BY-SA 4.0"></a>
+</p>
 
 
 </section>
