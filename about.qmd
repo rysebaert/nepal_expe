@@ -19,7 +19,13 @@ Geolocation have been obtained following 3 steps based on the name of the peak i
 
 - Get the geolocation based on a query on the Wikipedia database with the `wikidataR` package.
 - If the peaks locations haven't been found, try to extract this information from the OpenStreetMap database and the `osmextract` R package.
-- For the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal [Himal Peak Profile](https://nepalhimalpeakprofile.org/peak-profile/all-peaks) website.
+- For the rest, manual completion with personal survey and checks, mainly processed thanks to the list provided by the Nepal [Himal Peak Profile](https://nepalhimalpeakprofile.org/peak-profile/all-peaks) website. In this step, some unknown location peaks have been aggregated. For instance, Fang and Glacier Dome have been rattached to Annapurna I peak, Churen Himal Central, East and West (no precise location found) have been aggregated to Churen, Domo Kang and Domo to Domo, etc. 
+
+All this consolidation output can be found in [this file](https://github.com/rysebaert/nepal_expe/blob/main/data_conso/peaks_osm_wiki_6700.csv). If the column wiki is set by 1, it means that the location of the peak has been identified with Wikipedia. If osm, osm.x and osm.y is defined by 1 value, it means that peak coordinates has been identified with OpenStreetMap (OSM value *name*, *int_name* and *en_name*). Finally the column PKCONSO gives aggregated name for undefined locations (14 peaks).
+
+This consolidation process could for sure be improved. But, well, it works at the moment :-)
+
+
 
 ## Indicator creation
 
@@ -31,7 +37,57 @@ For this dataset, at [table of correspondence](https://github.com/rysebaert/nepa
 - **Several citizenship declared** : When several citizenship appear (e.g. *Ukraine/Azerbaijan*), the first one is only kept (*Ukraine* in this case).
 
 
+# Consolidated datasets
+
+2 geojson files are created, 1 is used for peak visualization and 1 for expedition members at country level. The column is the description shows if the data is used for the mapping or not (stock for proportional circles, ratio for color palettes other being not directly mapped but can be used for labeling).
+
+## Peak indicators
+
+```{r}
+#| echo: false
+#| label: tbl-1
+#| tbl-cap: "Listing of consolidated indicators for peaks above 6700m"
+library(kableExtra) # Table formatting
+meta <- read.csv("data_conso/metadata.csv")
+
+kable(meta, booktabs = T)
+```
+
+
+## Country indicators
+
+```{r}
+#| echo: false
+#| label: tbl-2
+#| tbl-cap: "Listing of consolidated indicators at country level"
+library(kableExtra) # Table formatting
+meta <- read.csv("data_conso/metadata_world.csv")
+
+kable(meta, booktabs = T)
+```
+
+
 # Citation
 
-This work has been done on free time to explore possibilities offered by .ojs libraries and Quarto dashboard. I am not an Himalayist, even if I like very much **sparsely populated** mountainous areas :-)
+For attribution, please cite this work as:
+
+BibTeX citation : 
+
+```{markdown}
+@online{ysebaert,
+  author = {Ronan Ysebaert},
+  editor = {},
+  title = {Nepal expeditions wiewer},
+  date = {2024},
+  langid = {en}
+}
+```
+
+[Ysebaert Ronan](https://rysebaert.gitpages.huma-num.fr/cv/), 2024, Nepal expeditions viewer.
+
+
+<p align="center">
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+</p>
+
 
