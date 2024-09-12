@@ -36,16 +36,14 @@ viewof k = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
 
 ```{ojs}
 //| echo: false
-
-{
-  let svg = viz.create({
+svg = viz.create({
     width: 800, 
     domain: peaks, 
     margin: 150,
     projection: d3.geoMercator(),
     zoomable: true})
-  svg.tile({ url: tiles })
-  svg.plot({type: "propchoro", 
+tile = svg.tile({url: tiles, id: "tile" })
+symb = svg.plot({type: "propchoro", id: "symb",
             data: peaks,
             var1: prop_ind,
             var2: choro_ind,
@@ -62,11 +60,8 @@ viewof k = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
             leg2_frame: true,
             leg2_frame_fill : "white",
             leg2_frame_stroke: "#ffffff50"});
-  
-  svg.scalebar();
-  
-return svg.render()
-}
+scale = svg.scalebar({id: "scale"});
+svg.render({order: [tile, symb, scale]})
 ```
 
 </center>
@@ -124,19 +119,16 @@ viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
 
 ```{ojs}
 //| echo: false
-
-{
-  let svg = viz.create({
+svg2 = viz.create({
     width: 900, 
     domain: world, 
     margin: 0,
     projection: d3.geoNaturalEarth1(),
     zoomable: true})
-    
-  svg.outline();
-  svg.path({ datum: world, fill: "white", fillOpacity: 0.3 });
-  
-  svg.plot({type: "choro", 
+outline = svg2.outline({id:"outline"});
+countries = svg2.path({ datum: world, fill: "white", fillOpacity: 0.3, id: "countries" });
+choro = svg2.plot({type: "choro", 
+             id:"choro",
             data: world,
             var: choro_ind2,
             colors: "Sunset",
@@ -148,8 +140,8 @@ viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
             leg_missing_text: "No ascent",
             leg_frame_fill : "white",
             leg_frame_stroke: "#ffffff50"});
-            
-    svg.plot({type: "prop", 
+prop =  svg2.plot({type: "prop", 
+            id:"prop",
             data: world,
             var: prop_ind2,
             tip: `$NAMEen`,
@@ -160,9 +152,7 @@ viewof k2 = Inputs.range([4, 50], { label: "Circle size", step: 1, value:30 })
             leg_frame: true,
             leg_frame_fill : "white",
             leg_frame_stroke: "#ffffff80"});
-  
-return svg.render()
-}
+svg2.render({order:[outline, countries, choro, prop]})
 ```
 
 </center>
