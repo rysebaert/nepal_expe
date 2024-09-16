@@ -13,6 +13,7 @@ Another is dedicated to expedition members, aggregated a country level for sever
 
 The technical aim of this website is to test the integration of .ojs and .R workflows in quarto dashboards. 
 
+
 ## The Himalayan Database
 
 The [Himalayan Database](http://www.himalayandatabase.com/) is a compilation of records for all expeditions that have climbed in the Nepal Himalaya. The database is based on the expedition archives of Elizabeth Hawley, a longtime journalist based in Kathmandu, and it is supplemented by information gathered from books, alpine journals and correspondence with Himalayan climbers.

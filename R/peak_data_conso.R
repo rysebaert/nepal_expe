@@ -142,7 +142,16 @@ peaks <- peaks[,c("PKCONSO", "HEIGHTM", "TOTDAYS", "EXPE_TOT", "EXPE_SUCCESS",
                   "MEMBERS_DEATH_RT", "OPEN", "PYEAR", "PSUMMITERS", "PCOUNTRY",
                   "src", "pos")]
 
+# Transpose data
+peaks_t <- st_set_geometry(peaks, NULL)
+peaks_t <- t(peaks_t)
+peaks_t <- data.frame(peaks_t)
+names(peaks_t) <- peaks_t[1,]
+peaks_t <- peaks_t[-1,]
+
+
 # Export
+write.csv(peaks_t, "./data_conso/peak_6700_t_data.csv", row.names = FALSE)
 st_write(peaks, "./data_conso/peak_6700_geoloc_data.geojson")
 
 
